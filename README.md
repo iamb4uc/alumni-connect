@@ -1,6 +1,6 @@
-+++++++++++++++++++++++++++++++++++++++
-++ Documentation and Code of conduct ++
-+++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++  
+++ Documentation and Code of conduct ++  
++++++++++++++++++++++++++++++++++++++++  
 
 This is the main repository for the karimganj college's  
 alumni association platform called alumni connect which is  
