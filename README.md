@@ -3,6 +3,7 @@
 ++ Documentation and Code of conduct ++
 +++++++++++++++++++++++++++++++++++++++
 ```
+[![Netlify Status](https://api.netlify.com/api/v1/badges/53e3ccdd-7a11-4123-a129-7e76378bc35f/deploy-status)](https://app.netlify.com/sites/karimganj-college-alumni-connect/deploys)
 
 This is the main repository for the karimganj college's  
 alumni association platform called alumni connect which is  
