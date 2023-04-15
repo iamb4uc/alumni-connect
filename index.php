@@ -1,64 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php include 'defaults/header.php'; ?>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alumni Connect</title>
+<?php include 'defaults/nav.php'; ?>
 
-    <?php require('user/subpage/links.php'); ?>
-    <link rel="stylesheet" href="./style.css">
-
-</head>
-
-<body>
-
-    <?php require('./user/subpage/header.php'); ?>
-    <!-- Main Content Area -->
-    <div class="container my-5 d-grid gap-5">
-        <div class="p-5 border">
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-                natus iusto fugit id saepe neque rerum magni laudantium accusantium
-                dolorem numquam quasi.
-            </p>
-        </div>
-        <div class="p-5 border">
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-                natus iusto fugit id saepe neque rerum magni laudantium accusantium
-                dolorem numquam quasi.
-            </p>
-        </div>
-        <div class="p-5 border">
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-                natus iusto fugit id saepe neque rerum magni laudantium accusantium
-                dolorem numquam quasi.
-            </p>
-        </div>
-        <div class="p-5 border">
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-                natus iusto fugit id saepe neque rerum magni laudantium accusantium
-                dolorem numquam quasi.
-            </p>
-        </div>
-        <div class="p-5 border">
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
-                natus iusto fugit id saepe neque rerum magni laudantium accusantium
-                dolorem numquam quasi. df
-            </p>
-        </div>
+<!-- Main Content Area -->
+<!-- Banner Image  -->
+<div class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center">
+    <div class="content text-center">
+        <h1 class="text-white">Alumni Connect</h1>
     </div>
+</div>
 
-    <?php require('./user/subpage/footer.php'); ?>
-</body>
+<div class="container my-5 d-grid gap-5">
+    <div class="p-5 border">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
+          natus iusto fugit id saepe neque rerum magni laudantium accusantium
+          dolorem numquam quasi.
+        </p>
+    </div>
+    <div class="p-5 border">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
+          natus iusto fugit id saepe neque rerum magni laudantium accusantium
+          dolorem numquam quasi.
+        </p>
+    </div>
+    <div class="p-5 border">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
+          natus iusto fugit id saepe neque rerum magni laudantium accusantium
+          dolorem numquam quasi.
+        </p>
+    </div>
+    <div class="p-5 border">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
+          natus iusto fugit id saepe neque rerum magni laudantium accusantium
+          dolorem numquam quasi.
+        </p>
+    </div>
+    <div class="p-5 border">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
+          natus iusto fugit id saepe neque rerum magni laudantium accusantium
+          dolorem numquam quasi.
+        </p>
+    </div>
+</div>
 
-</html>
+<?php include './defaults/footer.php'; ?>
