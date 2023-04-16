@@ -7,7 +7,7 @@
         </button>
 
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <!-- <div class="mx-auto"> </div> -->
+            <!-- <div class="mx-auto"></div> -->
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link text-white" href="#">HOME</a>
