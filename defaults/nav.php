@@ -28,6 +28,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#">Sign Up/Register</a></li>
+                        <li><a class="dropdown-item" href="#">My Profile</a></li>
 
                     </ul>
                 </li>
@@ -41,4 +42,3 @@
         </div>
     </div>
 </nav>
-
