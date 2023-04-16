@@ -17,9 +17,9 @@
         </a>
       </div>
       <div class="col-lg-4 text-white align-self-center">
-        <h1 class="d-flex justify-content-lg-end justify-content-center">Alumni Connect</h1>
-        <div class="d-flex justify-content-lg-end justify-content-center">
-          <p style="width:250px">
+        <h1 class="d-flex justify-content-lg-start justify-content-center pb-2">Alumni Connect</h1>
+        <div class="d-flex justify-content-lg-start justify-content-center">
+          <p style="width:400px">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Accusamus, porro maiores! Itaque, corrupti? Asperiores eligendi assumenda totam iste voluptatem labore,
             sint a perspiciatis in reprehenderit incidunt, dicta voluptates maiores autem.
