@@ -2,6 +2,8 @@
 
 <?php include 'defaults/nav.php'; ?>
 
+
+
 <!-- Main Content Area -->
 <!-- Banner Image  -->
 <div class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center">
@@ -29,9 +31,6 @@
     </div>
   </div>
 </div>
-
-
-
 
 
 
@@ -111,6 +110,7 @@
 </div>
 
 <!-- end register -->
+
 
 
 
