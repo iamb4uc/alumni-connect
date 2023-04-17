@@ -12,7 +12,7 @@
         </h1>
       </div>
       <div class="col-lg-4 align-self-end">
-        <a href="" class="d-flex justify-content-center" style="text-decoration: none;">
+        <a href="/subpages/register.php" class="d-flex justify-content-center" style="text-decoration: none;">
           <button type="button" class="btn btn-outline-warning btn-lg">Register as a Alumni</button>
         </a>
       </div>
