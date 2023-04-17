@@ -1,0 +1,76 @@
+-- TUMRA lagle php my admin o gia akta database
+-- banaitai jetar nam "alumniconnect" oito tar pore
+-- otar bhitre jaibai, kuno table banaibai na khali
+-- enter korbai r sql or akta tab ase ota khulbai otat
+-- ou command tin dibai jate sob table bonijai
+
+-- Regular registration database
+CREATE TABLE userinfo (
+  userid INT AUTO_INCREMENT PRIMARY KEY,
+  fname VARCHAR(50) NOT NULL,
+  lname VARCHAR(50) NOT NULL,
+  email VARCHAR(50) NOT NULL,
+  password VARCHAR(50) NOT NULL,
+  FOREIGN KEY (progstudy_id) REFERENCES program_study(progstudy_id),
+  FOREIGN KEY (designation_id) REFERENCES designation(designation_id)
+);
+
+
+-- TABLE FOR alumni registration jeta verification or liga use kora jaibo
+CREATE TABLE alumni (
+    alumni_id INT AUTO_INCREMENT PRIMARY KEY,
+    fname VARCHAR(50) NOT NULL,
+    lname VARCHAR(50) NOT NULL,
+    batchyr INT NOT NULL,
+    progstudy_id INT NOT NULL,
+    designation_id INT NOT NULL,
+    password VARCHAR(50) NOT NULL,
+    FOREIGN KEY (progstudy_id) REFERENCES program_study(progstudy_id),
+    FOREIGN KEY (designation_id) REFERENCES designation(designation_id)
+);
+
+-- Table for events that uses forien key to assign the guest for that event(if any)
+-- CREATE TABLE events (
+--   event_id INT AUTO_INCREMENT PRIMARY KEY,
+--   event_name VARCHAR(50) NOT NULL,
+--   event_date DATE NOT NULL,
+--   event_location VARCHAR(50) NOT NULL,
+--   guest_id INT NOT NULL,
+--
+--   -- parameters
+--   FOREIGN KEY (guest_id) REFERENCES alumni(id)
+-- );
+
+-- News ar jeta basic updates otar liga optional db table
+-- CREATE TABLE news (
+--     news_id INT AUTO_INCREMENT PRIMARY KEY,
+--     news_title VARCHAR(50) NOT NULL,
+--     news_content TEXT,
+--     news_date DATE NOT NULL, -- YYYY-MM-DD format lagbo by default
+--     document BLOB
+-- );
+
+-- User personal contact information or database
+CREATE TABLE alumndata (
+  contact_id INT AUTO_INCREMENT PRIMARY KEY,
+  alumni_id INT NOT NULL,
+  email VARCHAR(50) NOT NULL,
+  phone VARCHAR(20),
+  address VARCHAR(100),
+
+  -- Social
+  linkdin VARCHAR(100),
+  github VARCHAR(100),
+  instagram VARCHAR(100),
+  facebook VARCHAR(100),
+  twitter VARCHAR(100),
+
+  -- College details
+  graduationyr DATE NOT NULL, -- YYYY-MM-DD
+  major VARCHAR(50),
+
+  -- parameters
+  FOREIGN KEY (alumni_id) REFERENCES alumni(id)
+);
+
+-- TODO create registration table, donation table
