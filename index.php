@@ -14,7 +14,7 @@
         </h1>
       </div>
       <div class="col-lg-4 align-self-end">
-        <a href="/subpages/register.php" class="d-flex justify-content-center" style="text-decoration: none;">
+        <a href="/subpage/register.php" class="d-flex justify-content-center" style="text-decoration: none;">
           <button type="button" class="btn btn-outline-warning btn-lg">Register as a Alumni</button>
         </a>
       </div>
@@ -56,7 +56,7 @@
             <input type="password" class="form-control shadow-none">
           </div>
           <div class="d-flex  justify-content-between mb-1">
-            <a href="javascript: void(0)" class="text-secondary text-decoration-none">New user Register!</a>
+            <a href="/subpage/register.php" class="text-secondary text-decoration-none">New user Register!</a>
             <button type="submit" class="btn btn-dark shadow-none align-item-center">Login</button>
             <a href="javascript: void(0)" class="text-secondary text-decoration-none">Forgot Password?</a>
           </div>
