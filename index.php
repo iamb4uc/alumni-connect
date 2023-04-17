@@ -56,7 +56,7 @@
             <input type="password" class="form-control shadow-none">
           </div>
           <div class="d-flex  justify-content-between mb-1">
-            <a href="/subpage/register.php" class="text-secondary text-decoration-none">New user Register!</a>
+            <a href="javascript: void(0)" class="text-secondary text-decoration-none">New user Register!</a>
             <button type="submit" class="btn btn-dark shadow-none align-item-center">Login</button>
             <a href="javascript: void(0)" class="text-secondary text-decoration-none">Forgot Password?</a>
           </div>
