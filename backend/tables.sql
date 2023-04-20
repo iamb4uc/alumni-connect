@@ -56,3 +56,10 @@ CREATE TABLE alumni_social (
   FOREIGN KEY (alumni_id) REFERENCES alumni(alumni_id)
 );
 
+CREATE TABLE administrator (
+admin_id INT AUTO_INCREMENT PRIMARY KEY,
+fname VARCHAR(50) NOT NULL,
+lname VARCHAR(50) NOT NULL,
+email VARCHAR(50) NOT NULL,
+password VARCHAR(50) NOT NULL
+);
