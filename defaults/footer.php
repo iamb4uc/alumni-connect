@@ -27,7 +27,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <p class="mb-0">&#127279; Copyleft 2023 no right reserved | Designed by Team A</p>
+          <p class="mb-0 text-white">&#127279; Copyleft 2023 no right reserved | Designed by Team A</p>
         </div>
         <div class="col-md-6">
           <div class="social-icons">
@@ -44,8 +44,7 @@
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 </html>
