@@ -25,7 +25,7 @@
           <div class="container">
               <div class="row">
                   <div class="col-md-6">
-                      <p class="mb-0">© 2023 copyright all right reserved | Designed by Team A</p>
+                      <p class="mb-0 text-white">© 2023 copyright all right reserved | Designed by Team A</p>
                   </div>
                   <div class="col-md-6">
                       <div class="social-icons">
