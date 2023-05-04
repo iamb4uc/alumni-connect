@@ -12,19 +12,15 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
+          <a class="nav-link" href="index.php">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Our Alumnis</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Events</a>
+          <a class="nav-link" href="event.php">Events</a>
         </li>
-<!--
-        <li class="nav-item">
-          <a class="nav-link" href="#">Donation</a>
-        </li>
--->
+
         <li class="nav-item">
           <a class="nav-link" href="#">About US</a>
         </li>
@@ -38,7 +34,7 @@
             Up</button></a>
 
         <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal"><button
-            class="btn custom-bg ms-lg-3">Login</button></a>
+            class="btn custom-bg  ms-lg-3">Login</button></a>
 
       </div>
 
