@@ -4,7 +4,7 @@
 
     <?php include 'subsection/banner.php'; ?>
 
-
+    
     <?php include 'subsection/register_login_modal.php'; ?>    
 
     <?php include 'subsection/alumnicard.php'; ?>
