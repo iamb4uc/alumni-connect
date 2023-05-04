@@ -57,11 +57,19 @@ img {
     font-weight: 700;
 }
 
+<<<<<<< HEAD
 .navbar .nav-link.active {
     color: var(--primary) !important;
 }
 
 /* .btn {
+=======
+ .navbar .nav-link.active {
+     color: var(--primary) !important; 
+} 
+/* 
+.btn {
+>>>>>>> b426c108d8d8e4c1dafaa3bc89ad16690f12cb93
     padding: 14px 18px;
     border-width: 2px;
     border-radius: 0;
@@ -118,6 +126,7 @@ section {
 }
 
 
+<<<<<<< HEAD
 .service {
     position: relative;
     z-index: 2;
@@ -184,6 +193,8 @@ section {
     transition: all 0.4s ease;
 }
 
+=======
+>>>>>>> b426c108d8d8e4c1dafaa3bc89ad16690f12cb93
 .team-member img {
     width: 125px;
     height: 125px;
