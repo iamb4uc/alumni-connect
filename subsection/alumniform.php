@@ -16,12 +16,12 @@
     </header>
     <form id="alumni-form">
       <div class="form-group">
-        <label id="name-label" for="name">First Name</label>
-        <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required />
+        <label id="name-label" for="fname">First Name</label>
+        <input type="text" name="fname" id="name" class="form-control" placeholder="Enter your name" required />
       </div>
       <div class="form-group">
-        <label id="name-label" for="name">Last Name</label>
-        <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required />
+        <label id="name-label" for="lname">Last Name</label>
+        <input type="text" name="lname" id="name" class="form-control" placeholder="Enter your name" required />
       </div>
       <div class="form-group">
         <label id="email-label" for="email">Email</label>
@@ -75,3 +75,19 @@
 </body>
 
 </html>
+<!-- // Get the user's information from the form
+$fname = $_POST["fname"];
+$lname = $_POST["lname"];
+$email = $_POST["email"];
+$batchyr = $_POST["batch_yrs"];
+
+// Insert the user's information into the database
+$sql = "INSERT INTO alumni (username, email, password) VALUES ('$username', '$email', '$password')";
+
+if (mysqli_query($conn, $sql)) {
+    echo "Registration successful";
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+
+mysqli_close($conn); -->

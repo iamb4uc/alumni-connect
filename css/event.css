@@ -42,12 +42,6 @@
     border-top-right-radius: 10px;
 }
 
-.btn {
-    border-top-left-radius: 100px;
-    border-top-right-radius: 100px;
-    border-bottom-left-radius: 100px;
-    border-bottom-right-radius: 100px;
-}
 
 .btn:hover {
     transition: 10s
