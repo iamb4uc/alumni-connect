@@ -1,65 +1,76 @@
--- Table for user login information
-CREATE TABLE userinfo (
-  userid INT AUTO_INCREMENT PRIMARY KEY,
-  fname VARCHAR(50) NOT NULL,
-  lname VARCHAR(50) NOT NULL,
-  email VARCHAR(50) NOT NULL,
-  password VARCHAR(50) NOT NULL
+-- database name: alumniconnect
+CREATE TABLE admin (
+  admin_id INT AUTO_INCREMENT PRIMARY KEY,
+  fname VARCHAR(100) NOT NULL,
+  lname VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL,
+  password VARCHAR(256) NOT NULL
 );
 
--- Table for user personal information
+CREATE TABLE member (
+  member_id INT AUTO_INCREMENT PRIMARY KEY,
+  fname VARCHAR(100) NOT NULL,
+  lname VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL,
+  password VARCHAR(256) NOT NULL
+);
+
 CREATE TABLE alumni (
   alumni_id INT AUTO_INCREMENT PRIMARY KEY,
-  fname VARCHAR(50) NOT NULL,
-  lname VARCHAR(50) NOT NULL,
+  fname VARCHAR(100) NOT NULL,
+  lname VARCHAR(100) NOT NULL,
   batchyr INT NOT NULL,
-  progstudy_id INT NOT NULL,
-  designation_id INT NOT NULL,
-  password VARCHAR(50) NOT NULL
+  password VARCHAR(256) NOT NULL
 );
 
--- TABLE FOR program study
-CREATE TABLE program_study (
-  progstudy_id INT AUTO_INCREMENT PRIMARY KEY,
-  alumni_id INT NOT NULL,
-  progstudy_name VARCHAR(50) NOT NULL,
-  department VARCHAR(50) NOT NULL,
-  FOREIGN KEY (alumni_id) REFERENCES alumni(alumni_id)
+CREATE TABLE departments (
+  department_id INT AUTO_INCREMENT PRIMARY KEY,
+  department_name VARCHAR(100) NOT NULL,
+  course VARCHAR(120) NOT NULL
 );
 
--- Table for designation
-CREATE TABLE designation (
+CREATE TABLE designations (
   designation_id INT AUTO_INCREMENT PRIMARY KEY,
-  designation_name VARCHAR(10) NOT NULL
+  designation_name VARCHAR(100) NOT NULL
 );
 
--- User personal contact information or database
-CREATE TABLE alumndata (
-  contact_id INT AUTO_INCREMENT PRIMARY KEY,
+CREATE TABLE alumni_profiles (
   alumni_id INT NOT NULL,
+  department_id INT NOT NULL,
+  designation_id INT NOT NULL,
+  address VARCHAR(256),
   email VARCHAR(50) NOT NULL,
-  phone VARCHAR(20),
-  address VARCHAR(100),
-  graduationyr YEAR NOT NULL,
-  major VARCHAR(50),
+  phone_number VARCHAR(20),
+  batch_year DATE NOT NULL,
+  bio VARCHAR(256),
+  occupation VARCHAR(50),
+  PRIMARY KEY (alumni_id),
+  FOREIGN KEY (alumni_id) REFERENCES alumni(alumni_id),
+  FOREIGN KEY (department_id) REFERENCES departments(department_id),
+  FOREIGN KEY (designation_id) REFERENCES designations(designation_id)
+);
+
+CREATE TABLE alumni_departments (
+  alumni_id INT NOT NULL,
+  department_id INT NOT NULL,
+  PRIMARY KEY (alumni_id, department_id),
+  FOREIGN KEY (alumni_id) REFERENCES alumni(alumni_id),
+  FOREIGN KEY (department_id) REFERENCES departments(department_id)
+);
+
+CREATE TABLE alumni_donations (
+  donation_id INT AUTO_INCREMENT PRIMARY KEY,
+  alumni_id INT NOT NULL,
+  amount INT NOT NULL,
+  transaction_date DATE NOT NULL,
   FOREIGN KEY (alumni_id) REFERENCES alumni(alumni_id)
 );
 
--- Table for alumni social media profiles
 CREATE TABLE alumni_social (
   alumni_id INT NOT NULL,
-  linkdin VARCHAR(100),
-  github VARCHAR(100),
-  instagram VARCHAR(100),
-  facebook VARCHAR(100),
-  twitter VARCHAR(100),
+  social_media_name VARCHAR(50) NOT NULL,
+  social_media_link VARCHAR(100) NOT NULL,
+  PRIMARY KEY (alumni_id, social_media_name),
   FOREIGN KEY (alumni_id) REFERENCES alumni(alumni_id)
 );
 
-CREATE TABLE administrator (
-admin_id INT AUTO_INCREMENT PRIMARY KEY,
-fname VARCHAR(50) NOT NULL,
-lname VARCHAR(50) NOT NULL,
-email VARCHAR(50) NOT NULL,
-password VARCHAR(50) NOT NULL
-);
