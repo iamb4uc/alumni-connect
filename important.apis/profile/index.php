@@ -2,8 +2,7 @@
 
 	require 'functions.php';
 
-	if(!is_logged_in())
-	{
+	if(!is_logged_in()) {
 		redirect('login.php');
 	}
 
@@ -11,8 +10,7 @@
 
 	$row = db_query("select * from users where id = :id limit 1",['id'=>$id]);
 
-	if($row)
-	{
+	if($row) {
 		$row = $row[0];
 	}
 
