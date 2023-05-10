@@ -28,9 +28,9 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `admin_cred` (
-  `sr_no` int(11) NOT NULL,
-  `admin_name` varchar(150) NOT NULL,
-  `admin_pass` varchar(150) NOT NULL
+  `sr_no` int(11) NOT NULL PRIMARY KEY,
+  `admin_name` VARCHAR(150) NOT NULL,
+  `admin_pass` VARCHAR(150) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -48,14 +48,19 @@ INSERT INTO `admin_cred` (`sr_no`, `admin_name`, `admin_pass`) VALUES
 --
 
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
-  `firstname` varchar(30) NOT NULL,
-  `lastname` varchar(30) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `image` varchar(1024) DEFAULT NULL,
-  `password` varchar(255) NOT NULL,
-  `gender` varchar(6) NOT NULL,
+  `id` INT(11) NOT NULL,
+  `firstname` VARCHAR(30) NOT NULL,
+  `lastname` VARCHAR(30) NOT NULL,
+  `email` VARCHAR(100) NOT NULL,
+  `image` VARCHAR(1024) DEFAULT NULL,
+  `password` VARCHAR(255) NOT NULL,
+  `gender` VARCHAR(6) NOT NULL,
   `date` datetime NOT NULL
+
+  `is_varified` BOOLEAN DEFAULT 0,
+  `occupations` VARCHAR(255),
+  `user_doc` VARCHAR(1024) DEFAULT NULL,
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -77,9 +82,6 @@ INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `image`, `password`
 --
 -- Indexes for table `admin_cred`
 --
-ALTER TABLE `admin_cred`
-  ADD PRIMARY KEY (`sr_no`);
-
 --
 -- Indexes for table `users`
 --

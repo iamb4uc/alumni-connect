@@ -34,6 +34,7 @@
 					<option selected value="">--Select Gender--</option>
 					<option value="Male">Male</option>
 					<option value="Female">Female</option>
+					<option value="Female">Others</option>
 				</select>
 			</div>
 			<div><small class="js-error js-error-gender text-danger"></small></div>
@@ -42,7 +43,25 @@
 				<span class="input-group-text" id="basic-addon1"><i class="bi bi-envelope"></i></span>
 				<input name="email" type="text" class="form-control p-3" placeholder="Email">
 			</div>
-			<div><small class="js-error js-error-email text-danger"></small></div>
+      <div><small class="js-error js-error-email text-danger"></small></div>
+
+			<div class="input-group mt-3">
+				<span class="input-group-text" id="basic-addon1"><i class="bi bi-calendar"></i></span>
+				<input name="batchyr" type="date" class="form-control p-3" placeholder="Batch Year">
+			</div>
+      <div><small class="js-error js-error-calendar text-danger"></small></div>
+
+			<div class="input-group mt-3">
+				<span class="input-group-text" id="basic-addon1"><i class="bi bi-briefcase"></i></span>
+				<input name="batchyr" type="text" class="form-control p-3" placeholder="Occupation">
+			</div>
+      <div><small class="js-error js-error-calendar text-danger"></small></div>
+
+			<div class="input-group mt-3">
+				<span class="input-group-text" id="basic-addon1"><i class="bi bi-file-earmark"></i></span>
+				<input name="batchyr" type="file" class="form-control p-3" >
+			</div>
+      <div><small class="js-error js-error-calendar text-danger"></small></div>
 
 			<div class="input-group mt-3">
 				<span class="input-group-text" id="basic-addon1"><i class="bi bi-key"></i></span>
@@ -55,14 +74,13 @@
 				<input name="retype_password" type="password" class="form-control p-3" placeholder="Retype Password">
 			</div>
 
-      <!--  -->
 			<div class="progress mt-3 d-none">
 				<div class="progress-bar" role="progressbar" style="width: 50%;">Working... 25%</div>
 			</div>
 
 			<button class="mt-3 btn btn-primary col-12">Signup</button>
 			<div class="m-2">
-				Already have an account? <a href="login.php">login here</a>
+				Already have an account? <a href="login.php">LOGIN HERE</a>
 			</div>
 
 		</div>
@@ -83,7 +101,6 @@
 			myform.append('data_type', data_type);
 
 			for (var i = 0; i < inputs.length; i++) {
-
 				myform.append(inputs[i].name, inputs[i].value);
 			}
 

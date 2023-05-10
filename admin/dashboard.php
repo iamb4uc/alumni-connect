@@ -21,6 +21,10 @@ adminLogin(); #For checking if user is login user or unauthorized  user
         <div class="row">
             <div class="col-lg-10 ms-auto p-4 overflow-hidden">
               <!-- Document Body -->
+              <!-- BOX 1 -->
+                <!-- Total user -->
+              <!-- BOX 2 -->
+                <!-- Total verified user -->
             </div>
         </div>
     </div>
