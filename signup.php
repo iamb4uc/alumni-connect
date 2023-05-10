@@ -55,6 +55,7 @@
 				<input name="retype_password" type="password" class="form-control p-3" placeholder="Retype Password">
 			</div>
 
+      <!--  -->
 			<div class="progress mt-3 d-none">
 				<div class="progress-bar" role="progressbar" style="width: 50%;">Working... 25%</div>
 			</div>
