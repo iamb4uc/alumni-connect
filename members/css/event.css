@@ -1,0 +1,54 @@
+*.main {
+  margin: 60px 0px 0px 0px;
+}
+
+.card {
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.card:hover {
+  box-shadow: 2px 2px 10px;
+  transition: 0.1s;
+}
+
+.card-body {
+
+  border-radius: 10 px;
+}
+
+.card-body:hover {
+  background-color: beige;
+  transition: .5s;
+}
+
+.card-img-top {
+  border-radius: 10px 10px 0px 0px;
+}
+
+.btn {
+  border-radius: 100px;
+}
+
+.btn:hover {
+  transition: 10s
+}
+
+.carousel {
+  height: 600px;
+  width: 80%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-size: 100% 100%;
+  margin-top: 1.5cm;
+}
+
+.down {
+  margin-top: 58%;
+}
