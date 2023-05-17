@@ -36,7 +36,7 @@
 			</div>
 <<<<<<< HEAD:login.php
 			<div class="text-center ">
-				<a href="./admin/index.php" class="text-secondary" style="text-decoration: none;">Admin login</a>
+				<a href="/admin/index.php" class="text-secondary" style="text-decoration: none;">Admin login</a>
 			</div>
 =======
 >>>>>>> parent of 324707f (Major Modification):important.apis/profile/login.php
@@ -130,8 +130,12 @@
 			}
 		}
 	};
+<<<<<<< HEAD:important.apis/profile/login.php
 <<<<<<< HEAD:login.php
 =======
 
 >>>>>>> parent of 324707f (Major Modification):important.apis/profile/login.php
 </script>
+=======
+</script>
+>>>>>>> parent of e1fc6a5 (updates (might have bugs)):login.php
