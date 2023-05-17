@@ -7,13 +7,13 @@ CREATE TABLE admin (
   password VARCHAR(256) NOT NULL
 );
 
--- CREATE TABLE member (
---   member_id INT AUTO_INCREMENT PRIMARY KEY,
---   fname VARCHAR(100) NOT NULL,
---   lname VARCHAR(100) NOT NULL,
---   email VARCHAR(100) NOT NULL,
---   password VARCHAR(256) NOT NULL
--- );
+CREATE TABLE member (
+  member_id INT AUTO_INCREMENT PRIMARY KEY,
+  fname VARCHAR(100) NOT NULL,
+  lname VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL,
+  password VARCHAR(256) NOT NULL
+);
 
 CREATE TABLE alumni (
   alumni_id INT AUTO_INCREMENT PRIMARY KEY,
