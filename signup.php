@@ -12,24 +12,21 @@
 <body>
 
 	<form method="post" onsubmit="myaction.collect_data(event, 'signup')">
-		<div class="col-md-8 col-lg-4 border rounded mx-auto mt-5 p-4 shadow">
+		<div class="col-md-12 col-lg-4 border rounded mx-auto mt-5 p-4 shadow">
 
 			<div class="h2">Signup</div>
 
-			<div class="input-group mt-3">
-				<span class="input-group-text" id="basic-addon1"><i class="bi bi-person-circle"></i></span>
+			<div class="col-md-12 mt-3">
 				<input name="firstname" type="text" class="form-control p-3" placeholder="First name">
 			</div>
 			<div><small class="js-error js-error-firstname text-danger"></small></div>
 
-			<div class="input-group mt-3">
-				<span class="input-group-text" id="basic-addon1"><i class="bi bi-person-square"></i></span>
+			<div class="col-md-12 mt-3">
 				<input name="lastname" type="text" class="form-control p-3" placeholder="Last name">
 			</div>
 			<div><small class="js-error js-error-lastname text-danger"></small></div>
 
 			<div class="input-group mt-3">
-				<span class="input-group-text" id="basic-addon1"><i class="bi bi-gender-ambiguous"></i></span>
 				<select class="form-select" name="gender">
 					<option selected value="">--Select Gender--</option>
 					<option value="Male">Male</option>
@@ -39,38 +36,33 @@
 			</div>
 			<div><small class="js-error js-error-gender text-danger"></small></div>
 
-			<div class="input-group mt-3">
-				<span class="input-group-text" id="basic-addon1"><i class="bi bi-envelope"></i></span>
+			<div class="col-md-12 mt-3">
 				<input name="email" type="text" class="form-control p-3" placeholder="Email">
 			</div>
       <div><small class="js-error js-error-email text-danger"></small></div>
 
-			<div class="input-group mt-3">
-				<span class="input-group-text" id="basic-addon1"><i class="bi bi-calendar"></i></span>
-				<input name="batchyr" type="date" class="form-control p-3" placeholder="Batch Year">
+      <div class="col-md-12 mt-3">
+				<input name="batchyr" type="number" class="form-control p-3" placeholder="Batch Year">
 			</div>
       <div><small class="js-error js-error-calendar text-danger"></small></div>
 
-			<div class="input-group mt-3">
-				<span class="input-group-text" id="basic-addon1"><i class="bi bi-briefcase"></i></span>
-				<input name="batchyr" type="text" class="form-control p-3" placeholder="Occupation">
+			<div class="col-md-12 mt-3">
+				<input name="occupation" type="text" class="form-control p-3" placeholder="Occupation">
 			</div>
       <div><small class="js-error js-error-calendar text-danger"></small></div>
 
-			<div class="input-group mt-3">
-				<span class="input-group-text" id="basic-addon1"><i class="bi bi-file-earmark"></i></span>
-				<input name="batchyr" type="file" class="form-control p-3" >
+			<div class="col-md-12 mt-3">
+<label class="form-label">Provide a validation file</label>
+				<input name="validfile" type="file" class="form-control p-3" placeholder="slkdfjskldjf">
 			</div>
       <div><small class="js-error js-error-calendar text-danger"></small></div>
 
-			<div class="input-group mt-3">
-				<span class="input-group-text" id="basic-addon1"><i class="bi bi-key"></i></span>
+			<div class="col-md-12 ps-0 mt-3">
 				<input name="password" type="password" class="form-control p-3" placeholder="Password">
 			</div>
 			<div><small class="js-error js-error-password text-danger"></small></div>
 
-			<div class="input-group mt-3">
-				<span class="input-group-text" id="basic-addon1"><i class="bi bi-key-fill"></i></span>
+			<div class="col-md-12 ps-0 mt-3">
 				<input name="retype_password" type="password" class="form-control p-3" placeholder="Retype Password">
 			</div>
 

@@ -37,7 +37,7 @@
 				Dont have an account? <a href="signup.php">signup here</a>
 			</div>
 			<div class="text-center ">
-				<a href="/admin/index.php" class="text-secondary" style="text-decoration: none;">Admin login</a>
+				<a href="./admin/index.php" class="text-secondary" style="text-decoration: none;">Admin login</a>
 			</div>
 		</div>
 	</form>

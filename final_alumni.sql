@@ -48,43 +48,21 @@ INSERT INTO `admin_cred` (`sr_no`, `admin_name`, `admin_pass`) VALUES
 --
 
 CREATE TABLE `users` (
-  `id` INT(11) NOT NULL,
+  `id` INT(11) NOT NULL PRIMARY KEY,
   `firstname` VARCHAR(30) NOT NULL,
   `lastname` VARCHAR(30) NOT NULL,
   `email` VARCHAR(100) NOT NULL,
   `image` VARCHAR(1024) DEFAULT NULL,
   `password` VARCHAR(255) NOT NULL,
   `gender` VARCHAR(6) NOT NULL,
-  `date` datetime NOT NULL
-
+  `date` datetime NOT NULL,
+  `batchyr` VARCHAR(50) NOT NULL,
   `is_varified` BOOLEAN DEFAULT 0,
   `occupations` VARCHAR(255),
   `user_doc` VARCHAR(1024) DEFAULT NULL,
 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `image`, `password`, `gender`, `date`) VALUES
-(6, 'John', 'Bates', 'email@email.com', 'uploads/1662232332user.jpg', '$2y$10$PUh/h0Exbs1GY/6o5CsbauwyImZPwVJ6AH0aLTDOlJzncIJVWi386', 'Male', '2022-09-03 21:12:12'),
-(7, 'Mary', 'Bates', 'mary@email.com', 'uploads/1662232388alicia-keys.jpg', '$2y$10$Q7c1b7rYlQ2nc9Jw.RWDAeL69f7zMy5y9UYx4wNUj7OSS64yT0KBm', 'Female', '2022-09-03 21:13:08'),
-(9, 'Jane', 'Doe', 'jane@email.com', 'uploads/1662233918pexels-photo-3756774.jpeg', '$2y$10$DhrdIIPD7hgJDvJAjNeFieLQU2M05yEPES2lJbJhARUU./ATsRzwW', 'Female', '2022-09-03 21:38:38'),
-(10, 'Masuk', 'mb', 'mb2@gmail.com', 'uploads/1683401699WhatsApp Image 2023-03-15 at 9.07.40 AM.jpeg', '$2y$10$FImKDG0BwCLkLWXvgFhqO.VAajdL8GAWpRxBnf/ri5yANKQuCS0Ey', 'Male', '2023-05-06 21:34:59'),
-(11, 'swapnil', 'Bwaomic', 'swapnil@gmail.com', NULL, '$2y$10$OOBdZlDylY9sgxjtScock.LWE4Cog0X6vlvOIu9M.BxDu5o4A.Sfe', 'Male', '2023-05-06 20:42:17'),
-(12, 'Moinal', 'Monkey', 'moina@gmail.com', 'uploads/1683437527licensed-image.jpg', '$2y$10$6gDRMb/J6FpH6aWTnuZVvOqNMVeQaSGAtXKAMfx5zVChdgxoGD8Zy', 'Male', '2023-05-07 07:32:07');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `admin_cred`
---
---
--- Indexes for table `users`
---
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD KEY `firstname` (`firstname`),
