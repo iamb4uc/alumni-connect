@@ -87,7 +87,3 @@ if(empty($info["errors"])) {
 
     $info["success"] = true;
 }
-
-// Output the response as JSON
-echo json_encode($info);
-}
