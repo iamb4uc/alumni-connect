@@ -2,39 +2,29 @@
 
 require 'functions.php';
 
-if(!empty($_POST['data_type']))
-{
+if(!empty($_POST['data_type'])) {
 	$info['data_type'] 	= $_POST['data_type'];
 	$info['errors'] 	= [];
 	$info['success'] 	= false;
 
-	if($_POST['data_type'] == "signup")
-	{
-
+	if($_POST['data_type'] == "signup") {
 		require 'includes/signup.php';
-	} else if($_POST['data_type'] == "profile-edit")
-	{
-
+	} else if($_POST['data_type'] == "profile-edit") {
 		$id = user('id');
-
-		$row = db_query("select * from users where id = :id limit 1",['id'=>$id]);
-		if($row)
-		{
+		$row = db_query("SELECT * FROM users where id = :id limit 1",['id'=>$id]);
+		if($row) {
 			$row = $row[0];
 		}
 		require 'includes/profile-edit.php';
-	} else if($_POST['data_type'] == "profile-delete")
-	{
+	} else if($_POST['data_type'] == "profile-delete") {
 		$id = user('id');
 
 		$row = db_query("select * from users where id = :id limit 1",['id'=>$id]);
-		if($row)
-		{
+		if($row) {
 			$row = $row[0];
 		}
 		require 'includes/profile-delete.php';
-	} else if($_POST['data_type'] == "login")
-	{
+	} else if($_POST['data_type'] == "login") {
 		require 'includes/login.php';
 	}
 
