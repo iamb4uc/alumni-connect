@@ -2,6 +2,23 @@
 
 $info = array("errors" => array());
 
+/* Generate a unique ID */
+$id = uniqid();
+
+/* Insert data into table */
+$arr = array();
+$arr["id"] = $id;
+$arr["firstname"] = $_POST["firstname"];
+$arr["lastname"] = $_POST["lastname"];
+$arr["email"] = $_POST["email"];
+$arr["batchyr"] = $_POST["batchyr"];
+$arr["occupation"] = $_POST["occupation"];
+$arr["validfile"] = isset($validfile) ? $validfile : '';
+$arr["gender"] = $_POST["gender"];
+$arr["password"] = password_hash($_POST["password"], PASSWORD_DEFAULT);
+$arr["date"] = date("Y-m-d H:i:s");
+
+
 /* validate firstname */
 if(empty($_POST["firstname"])) {
     $info["errors"]["firstname"] = "A first name is required";
@@ -52,10 +69,7 @@ if(empty($_POST["occupation"])) {
     $info["errors"]["occupation"] = "An occupation is required";
 }
 
-// Generate a unique ID
-$id = uniqid();
-
-// Insert data into the 'users' table
+/* Insert data into the 'users' table */
 $arr["id"] = $id;
 
 /* validate validfile */
@@ -76,21 +90,9 @@ if(!empty($_FILES['validfile']['name'])) {
 }
 
 if(empty($info["errors"])) {
-    // save to database or perform further processing
-    $arr = array();
-    $arr["firstname"] = $_POST["firstname"];
-    $arr["lastname"] = $_POST["lastname"];
-    $arr["email"] = $_POST["email"];
-    $arr["batchyr"] = $_POST["batchyr"];
-    $arr["occupation"] = $_POST["occupation"];
-    $arr["validfile"] = isset($validfile) ? $validfile : '';
-    $arr["gender"] = $_POST["gender"];
-    $arr["password"] = password_hash($_POST["password"], PASSWORD_DEFAULT);
-    $arr["date"] = date("Y-m-d H:i:s");
-
-    // Assuming you have a database connection and a query execution function
     db_query("INSERT INTO users (id, firstname, lastname, gender, email, batchyr, occupation, validfile, password, date) VALUES (:id, :firstname, :lastname, :gender, :email, :batchyr, :occupation, :validfile, :password, :date)", $arr);
-    /* db_query("INSERT INTO users (firstname, lastname, gender, email, batchyr, occupation, validfile, password, date, id) VALUES (:firstname, :lastname, :gender, :email, :batchyr, :occupation, :validfile, :password, :date, :id)", $arr); */
-
     $info["success"] = true;
 }
+
+// Return the JSON response
+echo json_encode($info);
