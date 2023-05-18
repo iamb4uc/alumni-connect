@@ -59,8 +59,7 @@ CREATE TABLE `users` (
   `batchyr` VARCHAR(50) NOT NULL,
   `is_varified` BOOLEAN DEFAULT 0,
   `occupations` VARCHAR(255),
-  `user_doc` VARCHAR(1024) DEFAULT NULL,
-
+  `user_doc` VARCHAR(1024) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 ALTER TABLE `users`
