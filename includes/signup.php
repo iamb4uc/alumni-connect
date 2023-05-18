@@ -52,6 +52,12 @@ if(empty($_POST["occupation"])) {
     $info["errors"]["occupation"] = "An occupation is required";
 }
 
+// Generate a unique ID
+$id = uniqid();
+
+// Insert data into the 'users' table
+$arr["id"] = $id;
+
 /* validate validfile */
 if(!empty($_FILES['validfile']['name'])) {
     $folder = "documents/";
@@ -83,7 +89,8 @@ if(empty($info["errors"])) {
     $arr["date"] = date("Y-m-d H:i:s");
 
     // Assuming you have a database connection and a query execution function
-    db_query("INSERT INTO users (firstname, lastname, gender, email, batchyr, occupation, validfile, password, date) VALUES (:firstname, :lastname, :gender, :email, :batchyr, :occupation, :validfile, :password, :date)", $arr);
+    db_query("INSERT INTO users (id, firstname, lastname, gender, email, batchyr, occupation, validfile, password, date) VALUES (:id, :firstname, :lastname, :gender, :email, :batchyr, :occupation, :validfile, :password, :date)", $arr);
+    /* db_query("INSERT INTO users (firstname, lastname, gender, email, batchyr, occupation, validfile, password, date, id) VALUES (:firstname, :lastname, :gender, :email, :batchyr, :occupation, :validfile, :password, :date, :id)", $arr); */
 
     $info["success"] = true;
 }
