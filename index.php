@@ -13,7 +13,10 @@ include 'defaults/navbar.php';
 				<h1 class="display-4 text-white">Alumni Connect</h1>
 				<p class="text-white my-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque quia
 					sequi eius. Quas, totam aliquid. Repudiandae reiciendis vel excepturi ipsa voluptate dicta!</p>
-				<a href="/members/subsection/alumniform.php" class="btn btn-lg me-2 custom-bg">Donate Us</a>
+				<!-- <a href="#" class="btn btn-lg me-2 custom-bg">Donate Us </a> -->
+				<div class="razorpay-embed-btn" data-color="#FFD700" data-url="https://pages.razorpay.com/pl_LejMXARsg7uUU3/view" data-text="Donate" data-size="medium">
+				</div>
+
 
 			</div>
 		</div>
