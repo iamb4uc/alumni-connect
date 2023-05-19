@@ -11,13 +11,8 @@ if (!$con) {
     die("Sorry can't Connect to database" . mysqli_connect_error());
 }
 
-// else{
-//     echo "connection succesful";
-//     exit;
-// }
 
-function filteration($data)
-{
+function filteration($data) {
     foreach ($data as $key => $value) {
         $data[$key] = trim($value);
         $data[$key] = stripcslashes($value);
@@ -26,7 +21,6 @@ function filteration($data)
     }
     return $data;
 }
-
 
 
 function select($sql, $values, $datatypes)
@@ -40,9 +34,41 @@ function select($sql, $values, $datatypes)
             return $res;
         } else {
             mysqli_stmt_close($stmt);
-            die("Queary cannot be executet- Select function");
+            die("Query cannot be executet- Select function");
         }
     } else {
-        die("Queary cannot be prepared- Select function");
+        die("Query cannot be prepared- Select function");
     }
+}
+
+function getTotalusers() {
+  $con = $GLOBALS['con'];
+  $sql = "SELECT COUNT(*) AS total_rows FROM users";
+
+  $result = $con->query($sql);
+  // Fetch the result
+  $row = $result->fetch_assoc();
+
+  // Access the total_rows value
+  $totalRows = $row['total_rows'];
+
+  // Display the total number of rows
+  echo $totalRows;
+
+}
+
+function getTotaladmins() {
+  $con = $GLOBALS['con'];
+  $sql = "SELECT COUNT(*) AS total_rows FROM admin_cred";
+
+  $result = $con->query($sql);
+  // Fetch the result
+  $row = $result->fetch_assoc();
+
+  // Access the total_rows value
+  $totalRows = $row['total_rows'];
+
+  // Display the total number of rows
+  echo $totalRows;
+
 }
