@@ -1,8 +1,7 @@
 <?php
 
 // Admin login check if user is a login user or not
-function adminLogin()
-{
+function adminLogin() {
     session_start();
     if (!(isset($_SESSION['adminLogin']) && $_SESSION['adminLogin'] == true)) {
         echo "<script>
@@ -13,16 +12,14 @@ function adminLogin()
 }
 // End login check
 
-function redirect($url)
-{
+function redirect($url) {
     echo "<script>
         window.location.href='$url';
     </script>";
 }
 
 
-function alert($type, $msg)
-{
+function alert($type, $msg) {
     $bs_class = ($type == "success") ? "alert-success" : "alert-danger";
     echo <<<alert
         <div class="alert $bs_class alert-dismissible fade show custom-alert" role="alert">
@@ -31,3 +28,4 @@ function alert($type, $msg)
         </div>
         alert;
 }
+
