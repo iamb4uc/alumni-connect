@@ -58,8 +58,8 @@ CREATE TABLE `users` (
   `date` datetime NOT NULL,
   `batchyr` VARCHAR(50) NOT NULL,
   `is_varified` BOOLEAN DEFAULT 0,
-  `occupations` VARCHAR(255),
-  `user_doc` VARCHAR(1024) DEFAULT NULL
+  `occupation` VARCHAR(255),
+  `validfile` VARCHAR(1024) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 ALTER TABLE `users`
