@@ -1,26 +1,42 @@
 <?php
 
-	$arr = [];
-	$arr['email'] 		= $_POST['email'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Retrieve email and password from the form
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
- 	$row = db_query("select * from users where email = :email limit 1",$arr);
+    // Validate email and password
+    if (empty($email)) {
+        $info['errors']['email'] = 'Email is required';
+    }
+    if (empty($password)) {
+        $info['errors']['password'] = 'Password is required';
+    }
 
-	if(!empty($row))
-	{
-		$row = $row[0];
+    // If there are no validation errors, attempt to authenticate the user
+    if (empty($info['errors'])) {
+        // Query the database to check if the email exists
+        $rows = db_query("SELECT * FROM users WHERE email = :email LIMIT 1", ['email' => $email]);
 
-		//check the password
-		if(password_verify($_POST['password'], $row['password']))
-		{
-			//password correct
-			$info['success'] 	= true;
-			$_SESSION['PROFILE'] = $row;
-		}else
-		{
-			$info['errors']['email'] = "Wrong email or password";
-		}
+        if (is_countable($rows) && count($rows) == 0) {
+            $info['errors']['email'] = 'Email not registered';
+        } else {
+            // Email exists, verify the password
+            $row = $rows[0] ?? null; // Use the null coalescing operator to handle empty result
+            if ($row && password_verify($password, $row['password'])) {
+                // Authentication successful
+                $info['success'] = true;
+                // Add any additional data you want to include in the response
+                $info['message'] = 'Login successful';
+            } else {
+                // Incorrect password
+                $info['errors']['password'] = 'Incorrect password';
+            }
+        }
+    }
+}
 
-	}else
-	{
-		$info['errors']['email'] = "Wrong email or password";
-	}
+// Check if the email entered by the user exists in the database
+if (is_countable($rows) && count($rows) == 0) {
+    $info['errors']['email'] = "Email not registered";
+}
