@@ -10,8 +10,9 @@ TODO
 [ ] Fix Login form
   [ ] Fix the repeated errors (check logs)
 
-[ ] Create Admin Table
+[X] Create Admin Table
 
 [ ] Create Admin Dashboard
-  [ ] Show Totel users
+  [X] Show Totel users
+  [X] Show Total admin
   [ ] Show document and approved or not buttons
