@@ -56,7 +56,7 @@ require('subpage/db_config.php');
 
     <?php
     if (isset($_POST['admin_login'])) {
-        $frm_data = filteration($_POST); #call function form db_config.php
+        $frm_data = filteration($_POST); // call function form db_config.php
 
         $query = "SELECT * FROM `admin_cred` WHERE `admin_name` =? AND `admin_pass` =? ";
         $values = [$frm_data['admin_name'], $frm_data['admin_pass']];
