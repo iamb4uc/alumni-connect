@@ -70,5 +70,54 @@ function getTotaladmins() {
 
   // Display the total number of rows
   echo $totalRows;
+}
 
+function usertab() {
+  $con = $GLOBALS['con'];
+  $sql = "SELECT * FROM users ORDER BY date DESC LIMIT 50";
+  $result = $con->query($sql);
+  if ($result->num_rows > 0) {
+    echo "<table class='table table-sm table-dark'>";
+    echo "<tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Gender</th>
+      <th>Date of Creation</th>
+      <th>Batch Year</th>
+      <th>Is Verified?</th>
+      <th>Occupation</th>
+      </tr>";
+
+  // Loop through each row
+  while ($row = $result->fetch_assoc()) {
+    // Access row data
+    $id = $row["id"];
+    $ws= " ";
+    $fname = $row["firstname"];
+    $lname = $row["lastname"];
+    $email = $row["email"];
+    $gender = $row["gender"];
+    $creationDate = $row["date"];
+    $batchyr = $row["batchyr"];
+    $verified = $row["is_varified"];
+    $occupation = $row["occupation"];
+
+    // Output the row data in a table row
+    echo "<tr>";
+    echo "<td>$id</td>";
+    echo "<td>$fname$ws$lname</td>";
+    echo "<td>$email</td>";
+    echo "<td>$gender</td>";
+    echo "<td>$creationDate</td>";
+    echo "<td>$batchyr</td>";
+    echo "<td>$verified</td>";
+    echo "<td>$occupation</td>";
+    echo "</tr>";
+  }
+
+  echo "</table>";
+  } else {
+    echo "No rows found.";
+  }
 }
