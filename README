@@ -1,1 +1,17 @@
 THIS IS A NEW BRANCH OF THE LAST WORKING PROJECT VERSION BEFORE I FUCKED UP :)
+
+TODO
+
+[ ] Fix Signup form
+  [ ] Fix file upload
+  [ ] Fix errors
+  [ ] Fix security issues
+
+[ ] Fix Login form
+  [ ] Fix the repeated errors (check logs)
+
+[ ] Create Admin Table
+
+[ ] Create Admin Dashboard
+  [ ] Show Totel users
+  [ ] Show document and approved or not buttons
