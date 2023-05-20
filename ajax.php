@@ -19,7 +19,7 @@ if(!empty($_POST['data_type'])) {
 	} else if($_POST['data_type'] == "profile-delete") {
 		$id = user('id');
 
-		$row = db_query("select * from users where id = :id limit 1",['id'=>$id]);
+		$row = db_query("SELECT * FROM users WHERE id = :id LIMIT 1",['id'=>$id]);
 		if($row) {
 			$row = $row[0];
 		}
