@@ -31,7 +31,7 @@
 	}
 
 	//validate gender
-	$genders = ['Male','Female'];
+	$genders = ['Male','Female', 'Others'];
 	if(empty($_POST['gender']))
 	{
 		$info['errors']['gender'] = "A gender is required";
@@ -57,7 +57,7 @@
 
 	if(!empty($_FILES['image']['name']))
 	{
-		$folder = "uploads/";
+		$folder = "../uploads/";
 		if(!file_exists($folder))
 		{
 			mkdir($folder, 0777, true);
@@ -76,8 +76,7 @@
 	}
 
 
-	if(empty($info['errors']) && $row)
-	{
+	if(empty($info['errors']) && $row) {
 		//save to database
 		$arr = [];
 		$arr['firstname'] 	= $_POST['firstname'];
@@ -88,15 +87,13 @@
 		$arr['id'] 			= $row['id'];
 
 		$image_query = "";
-		if(!empty($image))
-		{
+		if(!empty($image)) {
 			$arr['image'] = $image;
 			$image_query = ",image = :image";
 		}
 
 		$password_query = "";
-		if(!empty($_POST['password']))
-		{
+		if(!empty($_POST['password'])) {
 			$arr['password'] 	= password_hash($_POST['password'], PASSWORD_DEFAULT);
 			$password_query = ",password = :password";
 		}
