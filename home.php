@@ -55,26 +55,33 @@ if ($row) {
                     </div>
                 </div>
                 <div class="col-md-8 mt-2">
-                    <div class="h2">User Profile</div>
+                    <div class="h2">User Information</div>
                     <table class="table table-striped">
                         <tr>
                             <th colspan="2">User Details:</th>
                         </tr>
                         <tr>
-                            <th><i class="bi bi-envelope"></i> Email</th>
+                            <th>Email</th>
                             <td><?= esc($row['email']) ?></td>
                         </tr>
                         <tr>
-                            <th><i class="bi bi-person-circle"></i> First name</th>
+                            <th>First Name</th>
                             <td><?= esc($row['firstname']) ?></td>
                         </tr>
                         <tr>
-                            <th><i class="bi bi-person-square"></i> Last name</th>
+                            <th>Last Name</th>
                             <td><?= esc($row['lastname']) ?></td>
                         </tr>
                         <tr>
-                            <th><i class="bi bi-gender-ambiguous"></i> Gender</th>
+                            <th>Gender</th>
                             <td><?= esc($row['gender']) ?></td>
+                        </tr>
+                    </table>
+                    <table class="table table-striped">
+                    <div class="h2">User Socials</div>
+                        <tr>
+                            <th>Facebook</th>
+                            <td><?= esc($row['facebook']) ?></td>
                         </tr>
                     </table>
                 </div>
