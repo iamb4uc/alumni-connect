@@ -45,12 +45,6 @@ adminLogin(); #For checking if user is login user or unauthorized  user
                 <?php usertab(); ?>
               </div>
           </div>
-          <div class="row">
-              <div class="table">
-                <h1>SQL QUERY</h1>
-                <?php adminquery(); ?>
-              </div>
-          </div>
         </div>
       </div>
     </div>
