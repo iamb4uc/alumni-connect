@@ -71,6 +71,32 @@ function getTotaladmins() {
   // Display the total number of rows
   echo $totalRows;
 }
+function verify_user($arg) {
+  if (isset($_POST['update_button'])) {
+    $con = $_GLOBAL['con'];
+    // Select all rows from the table
+    $sql = "SELECT * FROM users";
+    $result = $con->query($sql);
+
+    // Check if there are rows
+    if ($result->num_rows > 0) {
+      // Loop through each row and update the value from 0 to 1
+      while ($row = $result->fetch_assoc()) {
+        $id = $row['id']; // Assuming there is an 'id' column in your table
+
+        // Update the value for the current row
+        $updateSql = "UPDATE users SET is_varified = 1 WHERE id = $id";
+        if ($conn->query($updateSql) !== TRUE) {
+          echo "Error updating value for row with ID $id: " . $conn->error;
+        }
+      }
+      echo "Values updated successfully.";
+    } else {
+      echo "No rows found in the table.";
+    }
+  }
+}
+
 
 function usertab() {
   $con = $GLOBALS['con'];
@@ -100,7 +126,12 @@ function usertab() {
     $gender = $row["gender"];
     $creationDate = $row["date"];
     $batchyr = $row["batchyr"];
-    $verified = $row["is_varified"];
+    /* $verified = $row["is_varified"]; */
+    if ($row["is_varified"]==0) {
+      $verified = "Not Verified";
+    } else {
+      $verified = "Verified";
+    }
     $occupation = $row["occupation"];
 
     // Output the row data in a table row
