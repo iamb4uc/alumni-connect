@@ -71,7 +71,8 @@
 			</div>
 
 			<button class="mt-3 btn btn-primary col-12">Signup</button>
-			<div class="m-2">
+      <div class="text-center">
+        <br>
 				Already have an account? <a href="login.php">LOGIN HERE</a>
 			</div>
 
