@@ -1,7 +1,7 @@
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg py-3 sticky-top navbar-light bg-white">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.php">
             <!-- <img class="logo" src="img/demo colge 2.png" alt=""> -->
             <h3>Karimganj College</h3>
         </a>
@@ -24,7 +24,7 @@
                     <a class="nav-link" href="index.php#about">About US</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
+                    <a class="nav-link" href="index.php#contact">Contact</a>
                 </li>
             </ul>
             <div>
