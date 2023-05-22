@@ -4,17 +4,16 @@
             <div class="row gy-4">
                 <div class="col-lg-8">
                     <h1 class="text-white">Alumni Connect</h1>
-                    <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque sapiente autem
-                        deleniti fugiat maiores dolorum sint maxime! Maiores iste deleniti magnam quis nobis adipisci consequuntur
-                        ut, similique, commodi quam itaque?</p>
+                    <p class="text-white">Alumni connect is a platform created by few students of the computer applicaton department
+                    of karimganj college for the alumnus of our college.</p>
                 </div>
                 <div class="col-lg-4">
                     <h5 class="text-white">LINKS</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Our Alumnis</a></li>
-                        <li><a href="#">Events</a></li>
-                        <li><a href="#">Donation</a></li>
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="users.php">Our Alumnis</a></li>
+                        <li><a href="events.php">Events</a></li>
+                        <li><a href="https://pages.razorpay.com/pl_LejMXARsg7uUU3/view">Donate</a></li>
                         <li><a href="#">About us</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
