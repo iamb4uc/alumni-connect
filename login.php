@@ -32,12 +32,14 @@
 			</div>
 
 			<button class="btn btn-primary col-12">Login</button>
-
-			<div class="m-2">
-				Dont have an account? <a href="signup.php">signup here</a>
-			</div>
+			<div class="text-center">
+      <br>
+				Dont have an account? <a href="signup.php">SIGNUP HERE</a>
+      </div>
+      <br>
+      <br>
 			<div class="text-center ">
-				<a href="./admin/index.php" class="text-secondary" style="text-decoration: none;">ADMIN LOGIN</a>
+				<a href="./admin/index.php" class="text-black btn btn-info" style="text-decoration: none;">ADMIN LOGIN</a>
 			</div>
 		</div>
 	</form>
