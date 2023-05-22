@@ -22,7 +22,7 @@ adminLogin(); #For checking if user is login user or unauthorized  user
         <div class="col-lg-10 ms-auto p-4 overflow-hidden">
           <!-- Document Body -->
           <div class="row">
-            <div class="col-sm-3">
+            <div class="col-sm-4">
               <div class="card text-white bg-primary mb-4 text-center" style="max-width: 28rem;">
                 <div class="card-body">
                   <h5 class="card-title">TOTAL USERS</h5>
@@ -38,13 +38,17 @@ adminLogin(); #For checking if user is login user or unauthorized  user
                 </div>
             </div>
           </div>
-          <hr>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid" id="main-content">
+        <div class="col-lg-10 ms-auto p-4 overflow-hidden">
           <div class="row">
-              <div class="table">
-                <h1>Latest Users</h1>
-                <?php usertab(); ?>
-              </div>
+          <form method="POST">
+            <button type="submit" name="update_button">Update Values</button>
+          </form>
           </div>
+        </div>
         </div>
       </div>
     </div>
@@ -53,3 +57,6 @@ adminLogin(); #For checking if user is login user or unauthorized  user
 </body>
 
 </html>
+
+<?php
+?>
