@@ -39,7 +39,6 @@ if ($row) {
                 <div class="col-md-4 text-center mt-5">
                     <img src="<?= get_image($row['image']) ?>" class="img-fluid rounded" style="width: 180px;height:180px;object-fit: cover;">
                     <div>
-
                         <?php if (user('id') == $row['id']) : ?>
 
                             <a href="profile-edit.php">
@@ -55,7 +54,7 @@ if ($row) {
                     </div>
                 </div>
                 <div class="col-md-8 mt-2">
-                    <div class="h2">User Information</div>
+                    <div class="h2">Personal Information</div>
                     <table class="table table-striped">
                         <tr>
                             <th colspan="2">User Details:</th>
@@ -78,10 +77,18 @@ if ($row) {
                         </tr>
                     </table>
                     <table class="table table-striped">
-                    <div class="h2">User Socials</div>
+                    <div class="h2">Social Link</div>
                         <tr>
                             <th>Facebook</th>
                             <td><?= esc($row['facebook']) ?></td>
+                        </tr>
+                        <tr>
+                            <th>Facebook</th>
+                            <td><?= esc($row['twitter']) ?></td>
+                        </tr>
+                        <tr>
+                            <th>Facebook</th>
+                            <td><?= esc($row['linkedin']) ?></td>
                         </tr>
                     </table>
                 </div>
