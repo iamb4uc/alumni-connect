@@ -62,7 +62,7 @@ $arr["id"] = $id;
 
 /* validate validfile */
 if(!empty($_FILES['validfile']['name'])) {
-    $folder = "documents/";
+    $folder = "../uploads/documents/";
     if(!file_exists($folder)) {
         mkdir($folder, 0777, true);
         file_put_contents($folder.'index.html', 'Access denied');
