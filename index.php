@@ -42,19 +42,20 @@ include 'defaults/navbar.php';
 		<div class="row text-center g-4">
 			<?php if (!empty($rows)) : ?>
 				<?php foreach ($rows as $row) : ?>
+			    <?php if ($row['is_varified'] !== 0) : ?>
 					<div class="col-lg-3 col-sm-6">
 						<div class="team-member card-effect">
 							<img src="<?= get_image($row['image']) ?>" alt="">
 							<h5 class="mb-0 mt-4"><?= esc($row['firstname']) ?> <?= esc($row['lastname']) ?></h5>
-							<p>Web Developer</p>
+              <p><?= esc($row['occupation']) ?></p>
 							<div class="social-icons">
-								<a href="#"><i class="bi bi-facebook"></i></i></a>
-								<a href="#"><i class="bi bi-twitter"></i></a>
-								<a href="#"><i class="bi bi-linkedin"></i></i></a>
-							</div>
-						</div>
+              <a href="<?= esc($row['facebook']) ?>" target="_blank"><i class="bi bi-facebook"></i></i></a>
+								<a href="<?= esc($row['twitter']) ?>" target="_blank"><i class="bi bi-twitter"></i></a>
+								<a href="<?= esc($row['linkedin']) ?>" target="_blank"><i class="bi bi-linkedin"></i></i></a>
+              </div>
+            </div>
 					</div>
-
+			<?php endif; ?>
 				<?php endforeach; ?>
 			<?php else : ?>
 				<div class="text-center alert alert-danger">That profile was not found</div>
