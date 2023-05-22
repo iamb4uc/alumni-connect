@@ -53,28 +53,28 @@ if ($row) {
 							<th colspan="2">User Details:</th>
 						</tr>
 						<tr>
-							<th><i class="bi bi-envelope"></i> Email</th>
+							<th>Email</th>
 							<td>
 								<input value="<?= $row['email'] ?>" type="text" class="form-control" name="email" placeholder="Email">
 								<div><small class="js-error js-error-email text-danger"></small></div>
 							</td>
 						</tr>
 						<tr>
-							<th><i class="bi bi-person-circle"></i> First name</th>
+							<th>First name</th>
 							<td>
 								<input value="<?= $row['firstname'] ?>" type="text" class="form-control" name="firstname" placeholder="First name">
 								<div><small class="js-error js-error-firstname text-danger"></small></div>
 							</td>
 						</tr>
 						<tr>
-							<th><i class="bi bi-person-square"></i> Last name</th>
+							<th>Last name</th>
 							<td>
 								<input value="<?= $row['lastname'] ?>" type="text" class="form-control" name="lastname" placeholder="Last name">
 								<div><small class="js-error js-error-lastname text-danger"></small></div>
 							</td>
 						</tr>
 						<tr>
-							<th><i class="bi bi-gender-ambiguous"></i> Gender</th>
+							<th>Gender</th>
 							<td>
 								<select name="gender" class="form-select form-select mb-3" aria-label=".form-select-lg example">
 									<option value="">--Select Gender--</option>
@@ -87,14 +87,14 @@ if ($row) {
 						</tr>
 
 						<tr>
-							<th><i class="bi bi-key"></i> Password</th>
+							<th>Password</th>
 							<td>
 								<input type="password" class="form-control" name="password" placeholder="Password (leave empty to keep old password)">
 								<div><small class="js-error js-error-password text-danger"></small></div>
 							</td>
 						</tr>
 						<tr>
-							<th><i class="bi bi-key-fill"></i> Retype Password</th>
+							<th>Retype Password</th>
 							<td>
 								<input type="password" class="form-control" name="retype_password" placeholder="Retype Password">
 							</td>
@@ -110,9 +110,7 @@ if ($row) {
 
 						<button class="btn btn-primary float-end">Save</button>
 
-						<a href="index.php">
-							<label class="btn btn-secondary">Back</label>
-						</a>
+						<a href="home.php"><label class="btn btn-secondary">Back</label></a>
 
 					</div>
 				</form>
@@ -152,7 +150,7 @@ if ($row) {
 
 			for (var i = 0; i < inputs.length; i++) {
 
-				myform.append(inputs[i].name, inputs[i].value);
+				myform.append(inputs[i].name, inputs[i].valu);
 			}
 
 			if (image_added) {
