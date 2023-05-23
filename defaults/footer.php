@@ -26,7 +26,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <p class="mb-0 text-white">&#127279; Copyleft 2023 no right reserved | Designed by Team A</p>
+                    <p class="mb-0 text-white">&#127279; Copyleft 2023 no right reserved | Designed by Group A <br> <em>(Swapnil Bhowmik, Masuk Mazarbhuya, Moinak Shome, Priangshu Debnath, Lona)<em></p>
                 </div>
                 <div class="col-md-6">
                     <div class="social-icons">
