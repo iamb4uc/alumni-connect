@@ -83,11 +83,11 @@ if ($row) {
                             <td><?= esc($row['facebook']) ?></td>
                         </tr>
                         <tr>
-                            <th>Facebook</th>
+                            <th>Twitter</th>
                             <td><?= esc($row['twitter']) ?></td>
                         </tr>
                         <tr>
-                            <th>Facebook</th>
+                            <th>Linkedin</th>
                             <td><?= esc($row['linkedin']) ?></td>
                         </tr>
                     </table>
