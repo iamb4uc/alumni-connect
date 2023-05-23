@@ -16,19 +16,19 @@
 	}
 
 	//validate email
-	if(empty($_POST['email'])) {
-		$info['errors']['email'] = "An email is required";
-	} else if(!filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)) {
-		$info['errors']['email'] = "Email is not valid";
-	}
-
-	//validate gender
-	$genders = ['Male','Female'];
-	if(empty($_POST['gender'])) {
-		$info['errors']['gender'] = "A gender is required";
-	} else if(!in_array($_POST['gender'], $genders)) {
-		$info['errors']['gender'] = "Gender is not valid";
-	}
+	/* if(empty($_POST['email'])) { */
+	/* 	$info['errors']['email'] = "An email is required"; */
+	/* } else if(!filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)) { */
+	/* 	$info['errors']['email'] = "Email is not valid"; */
+	/* } */
+	/**/
+	/* //validate gender */
+	/* $genders = ['Male','Female']; */
+	/* if(empty($_POST['gender'])) { */
+	/* 	$info['errors']['gender'] = "A gender is required"; */
+	/* } else if(!in_array($_POST['gender'], $genders)) { */
+	/* 	$info['errors']['gender'] = "Gender is not valid"; */
+	/* } */
 
 	//validate password
 	if(!empty($_POST['password'])) {
@@ -61,8 +61,8 @@
 		$arr = [];
 		$arr['firstname'] 	= $_POST['firstname'];
 		$arr['lastname'] 	= $_POST['lastname'];
-		$arr['email'] 		= $_POST['email'];
-		$arr['gender'] 		= $_POST['gender'];
+		/* $arr['email'] 		= $_POST['email']; */
+		/* $arr['gender'] 		= $_POST['gender']; */
 		$arr['date'] 		= date("Y-m-d H:i:s");
 		$arr['id'] 			= $row['id'];
 
@@ -78,7 +78,7 @@
 			$password_query = ",password = :password";
 		}
  
-		db_query("update users set firstname = :firstname,lastname = :lastname,gender = :gender,date = :date,email = :email $image_query $password_query where id = :id limit 1",$arr);
+		db_query("update users set firstname = :firstname,lastname = :lastname,,date = :date,$image_query $password_query where id = :id limit 1",$arr);
 
 		//delete old image
 		if(!empty($image) && file_exists($row['image']))
