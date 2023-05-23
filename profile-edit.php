@@ -30,6 +30,7 @@ if ($row) {
 
 <body>
 
+	<?= include 'defaults/navbar.php'; ?>
 	<?php if (!empty($row)) : ?>
 
 		<div class="row col-lg-8 border rounded mx-auto mt-5 p-2 shadow-lg">
