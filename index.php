@@ -116,21 +116,14 @@ include 'defaults/navbar.php';
 	<div class="my-5 px-4">
 
 		<h1 class="text-center">About US</h1>
-		<p class="text-center mt-3">
-			Lorem ipsum dolor sit amet consectetur
-			adipisicing elit. <br> Doloremque exceptur maiores cum quae
-			inventore ipsa, aperiam sit vero atque sint.
-		</p>
+    <p class="text-center mt-3"> Established in 1946, Karimganj College is one of the pioneering Colleges of Assam, imparting education in Science, Arts & Commerce. Situated on the bank of Kushiara River demarcating Indo- Bangladesh Border, the College is playing a significant role for last six decades in the field of Higher Education of the region. Today, it is one of the leading colleges under Assam University.<br><a href="http://www.karimganjcollege.ac.in" target="_blank">Learn More...</a></p>
 	</div>
 	<div class="container">
 		<div class="row justify-content-between align-items-center">
 			<div class="col-lg-6 col-md-5 mb-4 order-lg-1 order-md-1 order-2">
-				<h3 class="mb-3">Lorem ipsum dolor sit</h3>
-				<p>
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto vero repellendus
-					perferendis aspernatur, quo delectus doloremque.
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto vero repellendus
-					perferendis aspernatur, quo delectus doloremque.
+				<h3 class="mb-3">About this project and the group</h3>
+        <p>
+          This project is done for the sole purpose of connecting the alumnus of this esteemed collge and let people view and connect with other alumnus. This project is done by a small group of 5 members from the 2020 batch Computer Application students.
 				</p>
 			</div>
 			<div class="col-lg-5 col-md-5 mb-4 order-lg-2 order-md-2 order-1">
