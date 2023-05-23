@@ -52,12 +52,12 @@ adminLogin(); #For checking if user is login user or unauthorized  user
         <div class="col-lg-10 ms-auto p-4 overflow-hidden">
           <div class="row">
               <div class="table">
-                <h1>USERS</h1>
+                <h1>Recently created users</h1>
                 <?php usertab(); ?>
-                <form action="" method="POST">
-                  <button type="submit" name="update_button" class="btn btn-primary">Verify Users</button>
-                </form>
-                <?php verify_user(); ?>
+            <form method='POST'>
+            <input type='submit' name='more' class="btn btn-secondary" value='Show More'>
+            <input type='submit' name='less' class="btn btn-primary" value='Show Less'>
+            </form>
               </div>
           </div>
         </div>
