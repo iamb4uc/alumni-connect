@@ -52,7 +52,7 @@ adminLogin(); #For checking if user is login user or unauthorized  user
         <div class="col-lg-10 ms-auto p-4 overflow-hidden">
           <div class="row">
               <div class="table">
-                <h1>Recently created users</h1>
+                <h1>User Table</h1>
                 <?php usertab(); ?>
             <form method='POST'>
             <input type='submit' name='more' class="btn btn-secondary" value='Show More'>
