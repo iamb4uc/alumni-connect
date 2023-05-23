@@ -48,10 +48,6 @@ function esc(string $str): string {
 	return htmlspecialchars($str);
 }
 
-function escnew(int $num): string {
-	return strval($num);
-}
-
 function get_image($path = ''): string {
 	if (file_exists($path)) {
 		return $path;
