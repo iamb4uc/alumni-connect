@@ -31,6 +31,14 @@ adminLogin(); #For checking if user is login user or unauthorized  user
               </div>
             </div>
             <div class="col-sm-4">
+              <div class="card text-white bg-primary mb-4 text-center" style="max-width: 28rem;">
+                <div class="card-body">
+                  <h5 class="card-title">TOTAL Verified USERS</h5>
+                  <p class="card-text"><?php totvusers(); ?></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
               <div class="card text-white bg-secondary mb-4 text-center" style="max-width: 28rem;">
                 <div class="card-body">
                   <h5 class="card-title">TOTAL ADMINS</h5>
@@ -40,16 +48,19 @@ adminLogin(); #For checking if user is login user or unauthorized  user
           </div>
         </div>
       </div>
-    </div>
     <div class="container-fluid" id="main-content">
         <div class="col-lg-10 ms-auto p-4 overflow-hidden">
           <div class="row">
-          <form method="POST">
-            <button type="submit" name="update_button">Update Values</button>
-          </form>
+              <div class="table">
+                <h1>USERS</h1>
+                <?php usertab(); ?>
+              </div>
           </div>
         </div>
         </div>
+      </div>
+    </div>
+    </div>
       </div>
     </div>
 

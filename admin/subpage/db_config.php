@@ -57,6 +57,22 @@ function getTotalusers() {
 
 }
 
+function totvusers() {
+  $con = $GLOBALS['con'];
+  $sql = "SELECT COUNT(*) AS total_rows FROM users WHERE is_varified = 1";
+
+  $result = $con->query($sql);
+  // Fetch the result
+  $row = $result->fetch_assoc();
+
+  // Access the total_rows value
+  $totalRows = $row['total_rows'];
+
+  // Display the total number of rows
+  echo $totalRows;
+
+}
+
 function getTotaladmins() {
   $con = $GLOBALS['con'];
   $sql = "SELECT COUNT(*) AS total_rows FROM admin_cred";
