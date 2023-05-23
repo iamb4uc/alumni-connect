@@ -1,76 +1,56 @@
 <?php
 
 	//validate firstname
-	if(empty($_POST['firstname']))
-	{
+	if(empty($_POST['firstname'])) {
 		$info['errors']['firstname'] = "A first name is required";
-	}else
-	if(!preg_match("/^[\p{L}]+$/", $_POST['firstname']))
-	{
+	} else if(!preg_match("/^[\p{L}]+$/", $_POST['firstname'])) {
 		$info['errors']['firstname'] = "First name cant have special characters or spaces and numbers";
 	}
 
 	//validate lastname
-	if(empty($_POST['lastname']))
-	{
+	if(empty($_POST['lastname'])) {
 		$info['errors']['lastname'] = "A last name is required";
-	}else
-	if(!preg_match("/^[\p{L}]+$/", $_POST['lastname']))
+	} else if(!preg_match("/^[\p{L}]+$/", $_POST['lastname']))
 	{
 		$info['errors']['lastname'] = "Last name cant have special characters or spaces and numbers";
 	}
 
 	//validate email
-	if(empty($_POST['email']))
-	{
+	if(empty($_POST['email'])) {
 		$info['errors']['email'] = "An email is required";
-	}else
-	if(!filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
-	{
+	} else if(!filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)) {
 		$info['errors']['email'] = "Email is not valid";
 	}
 
 	//validate gender
-	$genders = ['Male','Female', 'Others'];
-	if(empty($_POST['gender']))
-	{
+	$genders = ['Male','Female'];
+	if(empty($_POST['gender'])) {
 		$info['errors']['gender'] = "A gender is required";
-	}else
-	if(!in_array($_POST['gender'], $genders))
-	{
+	} else if(!in_array($_POST['gender'], $genders)) {
 		$info['errors']['gender'] = "Gender is not valid";
 	}
 
 	//validate password
-	if(!empty($_POST['password']))
-	{
-	
-		if($_POST['password'] !== $_POST['retype_password'])
-		{
+	if(!empty($_POST['password'])) {
+		if($_POST['password'] !== $_POST['retype_password']) {
 			$info['errors']['password'] = "Passwords dont match";
-		}else
-		if(strlen($_POST['password']) < 8)
-		{
+		} else if(strlen($_POST['password']) < 8) {
 			$info['errors']['password'] = "Password must be at least 8 characters long";
 		}
 	}
 
-	if(!empty($_FILES['image']['name']))
-	{
+	if(!empty($_FILES['image']['name'])) {
 		$folder = "../uploads/";
-		if(!file_exists($folder))
-		{
+		if(!file_exists($folder)) {
 			mkdir($folder, 0777, true);
 			file_put_contents($folder.'index.html', 'Access denied');
 		}
 
 		$allowed = ['image/jpeg','image/png'];
-		if(in_array($_FILES['image']['type'], $allowed))
-		{
+		if(in_array($_FILES['image']['type'], $allowed)) {
 			$image = $folder . time() . $_FILES['image']['name'];
 			move_uploaded_file($_FILES['image']['tmp_name'], $image);
-
-		}else{
+		} else {
 			$info['errors']['image'] = "Only images of this type allowed: ".implode(", ", $allowed);
 		}
 	}
