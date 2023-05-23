@@ -87,7 +87,7 @@ function getTotaladmins() {
   // Display the total number of rows
   echo $totalRows;
 }
-function verify_user($arg) {
+function verify_user() {
   if (isset($_POST['update_button'])) {
     $con = $_GLOBAL['con'];
     // Select all rows from the table
@@ -101,9 +101,9 @@ function verify_user($arg) {
         $id = $row['id']; // Assuming there is an 'id' column in your table
 
         // Update the value for the current row
-        $updateSql = "UPDATE users SET is_varified = 1 WHERE id = $id";
-        if ($conn->query($updateSql) !== TRUE) {
-          echo "Error updating value for row with ID $id: " . $conn->error;
+        $updateSql = "UPDATE users SET is_verified = 1 WHERE id = $id";
+        if ($con->query($updateSql) !== TRUE) {
+          echo "Error updating value for row with ID $id: " . $con->error;
         }
       }
       echo "Values updated successfully.";
