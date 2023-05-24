@@ -54,13 +54,6 @@ if ($row) {
 							<th colspan="2">User Details:</th>
 						</tr>
 						<tr>
-							<th>Email</th>
-							<td>
-								<input value="<?= $row['email'] ?>" type="text" class="form-control" name="email" placeholder="Email">
-								<div><small class="js-error js-error-email text-danger"></small></div>
-							</td>
-						</tr>
-						<tr>
 							<th>First name</th>
 							<td>
 								<input value="<?= $row['firstname'] ?>" type="text" class="form-control" name="firstname" placeholder="First name">
@@ -72,19 +65,6 @@ if ($row) {
 							<td>
 								<input value="<?= $row['lastname'] ?>" type="text" class="form-control" name="lastname" placeholder="Last name">
 								<div><small class="js-error js-error-lastname text-danger"></small></div>
-							</td>
-						</tr>
-						<tr>
-							<th>Gender</th>
-							<td>
-								<select name="gender" class="form-select form-select mb-3" aria-label=".form-select-lg example">
-									<option value="">--Select Gender--</option>
-									/* <option selected value="<?= $row['gender'] ?>"><?= $row['gender'] ?></option> */
-									<option value="Male">Male</option>
-									<option value="Female">Female</option>
-									<option value="Others">Others</option>
-								</select>
-								<div><small class="js-error js-error-gender text-danger"></small></div>
 							</td>
 						</tr>
 						<tr>

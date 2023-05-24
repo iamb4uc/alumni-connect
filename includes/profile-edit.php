@@ -81,10 +81,10 @@
 			$image_query = "image = :image";
 		}
 
-		$arr['email'] = $_POST['email'];
+		/* $arr['email'] = $_POST['email']; */
 		$arr['firstname'] = $_POST['firstname'];
 		$arr['lastname'] = $_POST['lastname'];
-		$arr['gender'] = $_POST['gender'];
+		/* $arr['gender'] = $_POST['gender']; */
 		$arr['batchyr'] = $_POST['batchyr'];
 		$arr['occupation'] = $_POST['occupation'];
 		$arr['date'] = date("Y-m-d H:i:s");
@@ -101,10 +101,8 @@
     db_query("UPDATE users SET
       id = :id,
       $image_query,
-      email = :email,
       firstname = :firstname,
       lastname = :lastname,
-      gender = :gender,
       batchyr = :batchyr,
       occupation = :occupation,
       date = :date
