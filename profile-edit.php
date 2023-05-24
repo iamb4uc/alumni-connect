@@ -71,14 +71,14 @@ if ($row) {
 							<th>Batch Year</th>
 							<td>
 								<input value="<?= $row['batchyr'] ?>" type="text" class="form-control" name="batchyr" placeholder="ex: 2000">
-								<div><small class="js-error js-error-lastname text-danger"></small></div>
+								<div><small class="js-error js-error-batchyr text-danger"></small></div>
 							</td>
 						</tr>
 						<tr>
 							<th>Occupation</th>
 							<td>
 								<input value="<?= $row['occupation'] ?>" type="text" class="form-control" name="occupation" placeholder="ex: Teacher">
-								<div><small class="js-error js-error-lastname text-danger"></small></div>
+								<div><small class="js-error js-error-occupation text-danger"></small></div>
 							</td>
 						</tr>
 						<tr>
@@ -106,21 +106,21 @@ if ($row) {
 							<th>Facebook</th>
 							<td>
 								<input value="<?= $row['facebook'] ?>" type="text" class="form-control" name="facebook" placeholder="https://facebook.com/user/xyz">
-								<div><small class="js-error js-error-lastname text-danger"></small></div>
+								<div><small class="js-error js-error-facebook text-danger"></small></div>
 							</td>
 						</tr>
 						<tr>
 							<th>Twitter</th>
 							<td>
 								<input value="<?= $row['twitter'] ?>" type="text" class="form-control" name="twitter" placeholder="https://twitter.com/user">
-								<div><small class="js-error js-error-lastname text-danger"></small></div>
+								<div><small class="js-error js-error-twitter text-danger"></small></div>
 							</td>
 						</tr>
 						<tr>
 							<th>Linkedin</th>
 							<td>
 								<input value="<?= $row['linkedin'] ?>" type="text" class="form-control" name="linkedin" placeholder="https://linkedin.com/user">
-								<div><small class="js-error js-error-lastname text-danger"></small></div>
+								<div><small class="js-error js-error-linkedin text-danger"></small></div>
 							</td>
 						</tr>
 					</table>
