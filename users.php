@@ -49,7 +49,7 @@ $rows = db_query("select * from users");
 					<div class="col-lg-3 col-sm-6">
 						<div class="team-member card-effect">
 							<img src="<?= get_image($row['image']) ?>" alt="">
-							<h5 class="mb-0 mt-4"><?= esc($row['firstname']) ?> <?= esc($row['lastname']) ?></h5>
+							<h5 class="mb-0 mt-4"><?= esc($row['firstname']) ?> <?= esc($row['lastname']) ?> <i class="bi bi-check2-circle"></i></h5>
               <p><?= esc($row['occupation']) ?></p>
 							<div class="social-icons">
               <a href="<?= esc($row['facebook']) ?>" target="_blank"><i class="bi bi-facebook"></i></i></a>
@@ -62,7 +62,7 @@ $rows = db_query("select * from users");
 			<?php endif; ?>
 				<?php endforeach; ?>
 			<?php else : ?>
-				<div class="text-center alert alert-danger">That profile was not found</div>
+				<div class="text-center"></div>
 				<a href="index.php">
 					<button class="btn btn-primary m-4">Home</button>
 				</a>
