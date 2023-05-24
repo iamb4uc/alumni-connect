@@ -109,6 +109,7 @@ function usertab() {
       <th>Batch Year</th>
       <th>Is Verified?</th>
       <th>Occupation</th>
+      <th>Documents</th>
       <th colspan='2'>Operations</th>
       </tr>";
 
@@ -123,6 +124,7 @@ function usertab() {
     $gender = $row["gender"];
     $creationDate = $row["date"];
     $batchyr = $row["batchyr"];
+    $docs= $row["validfile"];
     /* $verified = $row["is_varified"]; */
     if ($row["is_varified"]==0) {
       $verified = "Not Verified";
@@ -141,7 +143,8 @@ function usertab() {
     echo "<td>$batchyr</td>";
     echo "<td>$verified</td>";
     echo "<td>$occupation</td>";
-    echo "<td>"; echo "<a href='update.php?id=$row[id]&fn=$row[firstname]&ln=$row[lastname]&em=$row[email]&vr=$row[is_varified]' onclick='return checkdelete()'>EDIT/UPDATE</a>"; echo "</td>";
+    echo "<td><a href='$docs'>View File</a></td>";
+    echo "<td>"; echo "<a href='update.php?id=$row[id]&fn=$row[firstname]&ln=$row[lastname]&em=$row[email]&vr=$row[is_varified]' class='link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover' onclick='return checkdelete()'>EDIT/UPDATE</a>"; echo "</td>";
     echo "</tr>";
   }
 

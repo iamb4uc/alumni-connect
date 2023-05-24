@@ -34,6 +34,7 @@ if ($row) {
 	<?php if (!empty($row)) : ?>
 
 		<div class="row col-lg-8 border rounded mx-auto mt-5 p-2 shadow-lg">
+        <div class="h1 text-center">Edit Profile</div>
 			<div class="col-md-4 text-center">
 				<img src="<?= get_image($row['image']) ?>" class="js-image img-fluid rounded" style="width: 180px;height:180px;object-fit: cover;">
 				<div>
@@ -46,20 +47,19 @@ if ($row) {
 			</div>
 			<div class="col-md-8">
 
-				<div class="h2">Edit Profile</div>
 
 				<form method="post" onsubmit="myaction.collect_data(event, 'profile-edit')">
 					<table class="table table-striped">
 						<tr>
 							<th colspan="2">User Details:</th>
 						</tr>
-						<!-- <tr>
+						<tr>
 							<th>Email</th>
 							<td>
 								<input value="<?= $row['email'] ?>" type="text" class="form-control" name="email" placeholder="Email">
 								<div><small class="js-error js-error-email text-danger"></small></div>
 							</td>
-						</tr> -->
+						</tr>
 						<tr>
 							<th>First name</th>
 							<td>
@@ -74,7 +74,7 @@ if ($row) {
 								<div><small class="js-error js-error-lastname text-danger"></small></div>
 							</td>
 						</tr>
-						<!-- <tr>
+						<tr>
 							<th>Gender</th>
 							<td>
 								<select name="gender" class="form-select form-select mb-3" aria-label=".form-select-lg example">
@@ -82,11 +82,25 @@ if ($row) {
 									/* <option selected value="<?= $row['gender'] ?>"><?= $row['gender'] ?></option> */
 									<option value="Male">Male</option>
 									<option value="Female">Female</option>
+									<option value="Others">Others</option>
 								</select>
 								<div><small class="js-error js-error-gender text-danger"></small></div>
 							</td>
-						</tr> -->
-
+						</tr>
+						<tr>
+							<th>Batch Year</th>
+							<td>
+								<input value="<?= $row['batchyr'] ?>" type="text" class="form-control" name="batchyr" placeholder="ex: 2000">
+								<div><small class="js-error js-error-lastname text-danger"></small></div>
+							</td>
+						</tr>
+						<tr>
+							<th>Occupation</th>
+							<td>
+								<input value="<?= $row['occupation'] ?>" type="text" class="form-control" name="occupation" placeholder="ex: Teacher">
+								<div><small class="js-error js-error-lastname text-danger"></small></div>
+							</td>
+						</tr>
 						<tr>
 							<th>Password</th>
 							<td>
@@ -103,6 +117,33 @@ if ($row) {
 
 					</table>
 
+<hr>
+					<table class="table table-striped">
+						<tr>
+							<th colspan="2">Social Links:</th>
+						</tr>
+						<tr>
+							<th>Facebook</th>
+							<td>
+								<input value="<?= $row['facebook'] ?>" type="text" class="form-control" name="facebook" placeholder="https://facebook.com/user/xyz">
+								<div><small class="js-error js-error-lastname text-danger"></small></div>
+							</td>
+						</tr>
+						<tr>
+							<th>Twitter</th>
+							<td>
+								<input value="<?= $row['twitter'] ?>" type="text" class="form-control" name="twitter" placeholder="https://twitter.com/user">
+								<div><small class="js-error js-error-lastname text-danger"></small></div>
+							</td>
+						</tr>
+						<tr>
+							<th>Linkedin</th>
+							<td>
+								<input value="<?= $row['linkedin'] ?>" type="text" class="form-control" name="linkedin" placeholder="https://linkedin.com/user">
+								<div><small class="js-error js-error-lastname text-danger"></small></div>
+							</td>
+						</tr>
+					</table>
 					<div class="progress my-3 d-none">
 						<div class="progress-bar" role="progressbar" style="width: 50%;">Working... 25%</div>
 					</div>
