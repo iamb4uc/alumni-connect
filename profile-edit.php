@@ -53,6 +53,13 @@ if ($row) {
 						<tr>
 							<th colspan="2">User Details:</th>
 						</tr>
+            <tr>
+							<th>Email</th>
+							<td>
+								<input value="<?= $row['email'] ?>" type="text" class="form-control" name="email" placeholder="Email">
+								<div><small class="js-error js-error-email text-danger"></small></div>
+							</td>
+						</tr>
 						<tr>
 							<th>First name</th>
 							<td>
@@ -67,6 +74,18 @@ if ($row) {
 								<div><small class="js-error js-error-lastname text-danger"></small></div>
 							</td>
 						</tr>
+            <tr>
+							<th>Gender</th>
+							<td>
+								<select name="gender" class="form-select form-select mb-3" aria-label=".form-select-lg example">
+									<option value="">--Select Gender--</option>
+									<option value="Male">Male</option>
+									<option value="Female">Female</option>
+									<option value="Others">Others</option>
+								</select>
+								<div><small class="js-error js-error-gender text-danger"></small></div>
+							</td>
+						</tr>
 						<tr>
 							<th>Batch Year</th>
 							<td>
@@ -79,6 +98,13 @@ if ($row) {
 							<td>
 								<input value="<?= $row['occupation'] ?>" type="text" class="form-control" name="occupation" placeholder="ex: Teacher">
 								<div><small class="js-error js-error-occupation text-danger"></small></div>
+							</td>
+						</tr>
+						<tr>
+							<th>Bio</th>
+							<td>
+								<input value="<?= $row['bio'] ?>" type="text" class="form-control" name="bio">
+								<div><small class="js-error js-error-bio text-danger"></small></div>
 							</td>
 						</tr>
 						<tr>
@@ -172,7 +198,7 @@ if ($row) {
 
 			for (var i = 0; i < inputs.length; i++) {
 
-				myform.append(inputs[i].name, inputs[i].valu);
+				myform.append(inputs[i].name, inputs[i].value);
 			}
 
 			if (image_added) {

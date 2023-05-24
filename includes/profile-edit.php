@@ -19,11 +19,11 @@ if(!empty($_FILES['image']['name'])) {
 }
 
 //validate email
-/* if(empty($_POST['email'])) { */
-/* 	$info['errors']['email'] = "An email is required"; */
-/* } else if(!filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)) { */
-/* 	$info['errors']['email'] = "Email is not valid"; */
-/* } */
+if(empty($_POST['email'])) {
+	$info['errors']['email'] = "An email is required";
+} else if(!filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)) {
+	$info['errors']['email'] = "Email is not valid";
+}
 
 /* validate firstname */
 if(empty($_POST['firstname'])) {
@@ -40,12 +40,12 @@ if(empty($_POST['lastname'])) {
 }
 
 /* validate gender */
-/* $genders = ['Male','Female', 'Others']; */
-/* if(empty($_POST['gender'])) { */
-/* 	$info['errors']['gender'] = "A gender is required"; */
-/* } else if(!in_array($_POST['gender'], $genders)) { */
-/* 	$info['errors']['gender'] = "Gender is not valid"; */
-/* } */
+$genders = ['Male','Female', 'Others'];
+if(empty($_POST['gender'])) {
+	$info['errors']['gender'] = "A gender is required";
+} else if(!in_array($_POST['gender'], $genders)) {
+	$info['errors']['gender'] = "Gender is not valid";
+}
 
 /* validate batch year */
 if(empty($_POST['batchyr'])) {
@@ -69,9 +69,20 @@ if(!empty($_POST['password'])) {
 
 
 if(empty($info['errors']) && $row) {
-  //save to database
   $arr = [];
   $arr['id'] = $row['id'];
+
+  $arr['email'] = $_POST['email'];
+  $arr['firstname'] = $_POST['firstname'];
+  $arr['lastname'] = $_POST['lastname'];
+  $arr['gender'] = $_POST['gender'];
+  $arr['batchyr'] = $_POST['batchyr'];
+  $arr['occupation'] = $_POST['occupation'];
+  $arr['date'] = date("Y-m-d H:i:s");
+  $arr['facebook'] = $_POST['facebook'];
+  $arr['twitter'] = $_POST['twitter'];
+  $arr['linkedin'] = $_POST['linkedin'];
+  $arr['bio'] = $_POST['bio'];
 
   $image_query = "";
   if(!empty($image)) {
@@ -79,29 +90,32 @@ if(empty($info['errors']) && $row) {
     $image_query = "image = :image";
   }
 
-  /* $arr['email'] = $_POST['email']; */
-  $arr['firstname'] = $_POST['firstname'];
-  $arr['lastname'] = $_POST['lastname'];
-  /* $arr['gender'] = $_POST['gender']; */
-  $arr['batchyr'] = $_POST['batchyr'];
-  $arr['occupation'] = $_POST['occupation'];
-  $arr['date'] = date("Y-m-d H:i:s");
-  $arr['facebook'] = $_POST['facebook'];
-  $arr['twitter'] = $_POST['twitter'];
-  $arr['linkedin'] = $_POST['linkedin'];
-
   $password_query = "";
   if(!empty($_POST['password'])) {
     $arr['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
     $password_query = "password = :password";
   }
 
-  db_query("UPDATE users SET firstname = :firstname, lastname = :lastname, batchyr = :batchyr, occupation = :occupation, date = :date, facebook = :facebook, twitter = :twitter, linkedin = :linkedin, $image_query, $password_query WHERE id = :id LIMIT 1",$arr);
+  db_query("UPDATE users SET
+    email = :email,
+    firstname = :firstname,
+    lastname = :lastname,
+    gender = :gender,
+    batchyr = :batchyr,
+    occupation = :occupation,
+    date = :date,
+    facebook = :facebook,
+    twitter = :twitter,
+    linkedin = :linkedin,
+    bio = :bio,
+    $image_query,
+    $password_query
+    WHERE id = :id LIMIT 1",$arr);
 
   //delete old image
-  /* if(!empty($image) && file_exists($row['image'])) { */
-  /*   unlink($row['image']); */
-  /* } */
+  if(!empty($image) && file_exists($row['image'])) {
+    unlink($row['image']);
+  }
 
   $row = db_query("SELECT * FROM users where id = :id limit 1",['id'=>$row['id']]);
   if($row) {
