@@ -26,6 +26,13 @@ if(!empty($_POST['data_type'])) {
 		require 'includes/profile-delete.php';
 	} else if($_POST['data_type'] == "login") {
 		require 'includes/login.php';
+	} else if($_POST['data_type'] == "verify") {
+		$id = user('id');
+		$row = db_query("SELECT * FROM users where id = :id limit 1",['id'=>$id]);
+		if($row) {
+			$row = $row[0];
+		}
+		require 'includes/verify.php';
 	}
 
 	echo json_encode($info);
