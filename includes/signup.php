@@ -60,23 +60,6 @@ if(empty($_POST["occupation"])) {
 /* Insert data into the 'users' table */
 $arr["id"] = $id;
 
-/* validate validfile */
-if(!empty($_FILES['validfile']['name'])) {
-    $folder = "../uploads/documents/";
-    if(!file_exists($folder)) {
-        mkdir($folder, 0777, true);
-        file_put_contents($folder.'index.html', 'Access denied');
-    }
-
-    $allowed = array('image/jpeg', 'image/png', 'application/pdf');
-    if(in_array($_FILES['validfile']['type'], $allowed)) {
-        $validfile = $folder . time() . $_FILES['validfile']['name'];
-        move_uploaded_file($_FILES['validfile']['tmp_name'], $validfile);
-    } else {
-        $info['errors']['validfile'] = "Only valid files of the following types are allowed: ".implode(", ", $allowed);
-    }
-}
-
 if(empty($info["errors"])) {
   /* Insert data into table */
   $arr = array();
