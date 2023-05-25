@@ -11,7 +11,7 @@
 
 <body>
 
-	<form method="post" onsubmit="myaction.collect_data(event, 'signup')">
+	<form method="post" enctype="multipart/form-data" onsubmit="myaction.collect_data(event, 'signup')">
 		<div class="col-md-12 col-lg-4 border rounded mx-auto mt-5 p-4 shadow">
 
 			<div class="h2">Signup</div>
@@ -48,12 +48,6 @@
 
 			<div class="col-md-12 mt-3">
 				<input name="occupation" type="text" class="form-control p-3" placeholder="Occupation">
-			</div>
-      <div><small class="js-error js-error-calendar text-danger"></small></div>
-
-			<div class="col-md-12 mt-3">
-<label class="form-label">Provide a validation file</label>
-				<input name="validfile" type="file" class="form-control p-3" placeholder="slkdfjskldjf">
 			</div>
       <div><small class="js-error js-error-calendar text-danger"></small></div>
 
