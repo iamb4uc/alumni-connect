@@ -10,7 +10,7 @@ if(!empty($_FILES['file']['name'])) {
 
   $allowed = array('image/jpeg', 'image/png', 'application/pdf');
   if(in_array($_FILES['file']['type'], $allowed)) {
-    $file = $folder . time() . $_FILES['image']['name'];
+    $file = $folder . $_FILES['file']['name'];
     move_uploaded_file($_FILES['file']['tmp_name'], $file);
 
   } else {
