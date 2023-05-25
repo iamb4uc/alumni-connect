@@ -14,7 +14,13 @@
                 <ul class="nav nav-pills flex-column">
 
                     <li class="nav-item ">
-                        <a class="nav-link text-white" href="dashboard.php">Dashboard</a>
+                        <a class="nav-link text-white" href="dashboard.php">Main Dashboard</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link text-white" href="donation_dash.php">Donation Dashboard</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link text-white" href="content_dash.php">Content Dashboard</a>
                     </li>
 
 
