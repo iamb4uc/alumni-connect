@@ -88,3 +88,31 @@ function fetch_occupation() {
   }
 }
 
+function upload_document($file) {
+    $string = "mysql:host=localhost;dbname=final_alumni";
+    $con = new PDO($string, 'root', '');
+
+    // Process the uploaded document
+    if ($file['error'] === UPLOAD_ERR_OK) {
+        $fileTmpPath = $file['tmp_name'];
+        $fileName = $file['name'];
+        $fileSize = $file['size'];
+
+        // Open the document file for reading
+        $fileContent = file_get_contents($fileTmpPath);
+
+        // Prepare the INSERT statement
+        $sql = "INSERT INTO users (validfile) VALUES (:name, :size, :content)";
+        $stmt = $con->prepare($sql);
+        $stmt->bindParam(':name', $fileName);
+        $stmt->bindParam(':size', $fileSize);
+        $stmt->bindParam(':content', $fileContent, PDO::PARAM_LOB);
+
+        // Execute the statement
+        $stmt->execute();
+
+        echo "Document uploaded successfully.";
+    } else {
+        echo "Error uploading the document.";
+    }
+}
