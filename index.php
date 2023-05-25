@@ -25,7 +25,7 @@ include 'defaults/navbar.php';
 <!-- Alumni Card -->
 
 
-<?php $rows = db_query("SELECT * FROM users ORDER BY id ASC");
+<?php $rows = db_query("SELECT * FROM (SELECT * FROM users WHERE is_varified <> 0 ORDER BY id ASC) AS subquery LIMIT 8");
 ?>
 <section id="alumni">
   <div class="container">
