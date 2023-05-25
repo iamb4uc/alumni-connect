@@ -87,6 +87,21 @@ function getTotaladmins() {
   echo $totalRows;
 }
 
+function getTotaldonations() {
+  $con = $GLOBALS['con'];
+  $sql = "SELECT COUNT(*) AS total_rows FROM donation";
+
+  $result = $con->query($sql);
+  // Fetch the result
+  $row = $result->fetch_assoc();
+
+  // Access the total_rows value
+  $totalRows = $row['total_rows'];
+
+  // Display the total number of rows
+  echo $totalRows;
+}
+
 
 
 function usertab() {
@@ -99,7 +114,7 @@ function usertab() {
     }
   $result = $con->query($sql);
   if ($result->num_rows > 0) {
-    echo "<table class='table table-sm text-center table-dark'>";
+    echo "<table class='table text-center table-light'>";
     echo "<tr>
       <th>ID</th>
       <th>Name</th>
@@ -110,7 +125,7 @@ function usertab() {
       <th>Is Verified?</th>
       <th>Occupation</th>
       <th>Documents</th>
-      <th colspan='2'>Operations</th>
+      <th>Operations</th>
       </tr>";
 
   // Loop through each row
@@ -143,9 +158,58 @@ function usertab() {
     echo "<td>$batchyr</td>";
     echo "<td>$verified</td>";
     echo "<td>$occupation</td>";
-    echo "<td><a href='$docs'>View File</a></td>";
-    echo "<td>"; echo "<a href='update.php?id=$row[id]&fn=$row[firstname]&ln=$row[lastname]&em=$row[email]&vr=$row[is_varified]' class='link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover' onclick='return checkdelete()'>EDIT/UPDATE</a>"; echo "</td>";
+    echo "<td><a href='$docs' target='_blank'>View File</a></td>";
+    echo "<td>"; echo "<a href='update.php?id=$row[id]&fn=$row[firstname]&ln=$row[lastname]&em=$row[email]&vr=$row[is_varified]' class='link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover' onclick='return checkdelete()'>UPDATE</a>"; echo "</td>";
     echo "</tr>";
+  }
+
+  echo "</table>";
+  } else {
+    echo "No rows found.";
+  }
+}
+
+
+function donationtab() {
+  $con = $GLOBALS['con'];
+  $sql = "SELECT * FROM donation ORDER BY transec_date DESC LIMIT 20";
+  if (isset($_POST['more'])) {
+    $sql = "SELECT * FROM donation ORDER BY transec_date DESC LIMIT 100";
+  } if (isset($_POST['less'])) {
+  $sql = "SELECT * FROM donation ORDER BY transec_date DESC LIMIT 2";
+    }
+  $result = $con->query($sql);
+  if ($result->num_rows > 0) {
+    echo "<table class='table table-dark'>";
+    echo "<tr>
+      <th>Donation ID</th>
+      <th>User ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Amount</th>
+      <th>Transection Date</th>
+      </tr>";
+
+  // Loop through each row
+  while ($row = $result->fetch_assoc()) {
+    // Access row data
+    $ws= " ";
+    $donation_id = $row["donation_id"];
+    $id = $row["id"];
+    $fname = $row["fname"];
+    $lname = $row["lname"];
+    $email = $row["email"];
+    $amount = $row["amount"];
+    $transecDate = $row["transec_date"];
+    /* $verified = $row["is_varified"]; */
+    // Output the row data in a table row
+    echo "<tr>";
+    echo "<td>$donation_id</td>";
+    echo "<td>$id</td>";
+    echo "<td>$fname$ws$lname</td>";
+    echo "<td>$email</td>";
+    echo "<td>$amount</td>";
+    echo "<td>$transecDate</td>";
   }
 
   echo "</table>";
