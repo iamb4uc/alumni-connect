@@ -91,7 +91,7 @@ if ($row) {
 			}
 
 			if (image_added) {
-				myform.append('image', document.querySelector('.js-image-input').files[0]);
+				myform.append('file', document.querySelector('.js-image-input').files[0]);
 			}
 
 			myaction.send_data(myform);
