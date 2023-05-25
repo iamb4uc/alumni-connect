@@ -46,7 +46,7 @@ $is_verified=$_GET['vr'];
         <input type="email" class="form-control" id="fname" name="email" value="<?php echo $email; ?>">
       </div>
       <div class="form-group">
-        <label for="verified">Is Verified?:</label>
+        <label for="verified">Is Verified?(0/1):</label>
         <input type="number" name="verified" class="form-control" id="verified" value="<?php echo $is_verified; ?>">
       </div>
       <button type="submit" name="submit" class="btn btn-primary">Submit</button>
