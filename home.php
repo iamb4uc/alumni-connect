@@ -64,6 +64,15 @@ if ($row) {
                             <td><?= esc($row['email']) ?></td>
                         </tr>
                         <tr>
+                            <th>Verification Status</th>
+                            <td>
+                            <?php if ($row["is_varified"]==0) {
+                            echo "Not Verified";
+                            } else {
+                              echo "Verified";
+                            }?></td>
+                        </tr>
+                        <tr>
                             <th>First Name</th>
                             <td><?= esc($row['firstname']) ?></td>
                         </tr>
@@ -74,6 +83,10 @@ if ($row) {
                         <tr>
                             <th>Gender</th>
                             <td><?= esc($row['gender']) ?></td>
+                        </tr>
+                        <tr>
+                            <th>Bio</th>
+                            <td><?= esc($row['bio']) ?></td>
                         </tr>
                     </table>
                     <table class="table table-striped">
@@ -89,6 +102,19 @@ if ($row) {
                         <tr>
                             <th>Linkedin</th>
                             <td><?= esc($row['linkedin']) ?></td>
+                        </tr>
+                    </table>
+                    <table class="table table-striped">
+                    <div class="h2">Get Verified</div>
+                        <tr>
+                            <td>
+                            <?php if ($row["is_varified"]==0) {
+                              echo"<a href='index.php'>";
+                              echo"    <button class='btn btn-info m-4'><a href='verify.php'>Upload Documents</a></button>";
+                              echo"</a>";
+                            } else {
+                              echo "Verified! No need to submit documents";
+                            }?></td>
                         </tr>
                     </table>
                 </div>
