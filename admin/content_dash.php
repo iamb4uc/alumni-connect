@@ -22,12 +22,13 @@ adminLogin();
     <div class="container-fluid" id="main-content">
       <div class="row">
         <div class="col-lg-10 ms-auto p-4 overflow-hidden">
-          <div class="row">
-            <div class="col-sm-4">
           <!-- Document Body -->
+              <div class="table">
+                <h1>User Table</h1>
+                <?php dispContent(); ?>
+              </div>
 
 
-            </div>
           </div>
         </div>
       </div>
