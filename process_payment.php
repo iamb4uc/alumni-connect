@@ -60,6 +60,7 @@ $data = array(
 
 $result = db_query($query, $data);
 
+echo '<script>document.getElementById("razorpay_order_id").value = "' . $razorpayOrderId . '";</script>';
 
 // Redirect the user to the Razorpay payment portal
 $redirect_url = "https://pages.razorpay.com/pl_LejMXARsg7uUU3/view";

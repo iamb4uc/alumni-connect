@@ -40,8 +40,10 @@ if ($row) {
           <label for="name">Name:</label>
           <input type="text" class="form-control" id="name" value='<?php echo $row['firstname'] ?> <?php echo $row['lastname'] ?>' name="name" required>
           <label for="amount">Donation Amount:</label>
-          <input type="number" class="form-control" id="amount" name="amount" required><br>
-          <input type="submit" class="btn btn-danger" value="Donate">
+          <input type="number" id="amount" name="amount" required>
+          <input type="hidden" id="razorpay_order_id" name="razorpay_order_id">
+          <input type="submit" value="Donate">
+
         </form>
         </form>
 			</div>
@@ -57,7 +59,41 @@ if ($row) {
 			<button class="btn btn-primary m-4">Home</button>
 		</a>
 	<?php endif; ?>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+  var orderID = document.getElementById("razorpay_order_id").value;
+  var amount = document.getElementById("amount").value * 100; // Convert to the smallest currency unit (paisa for INR)
 
+  var options = {
+    "key": "rzp_test_3PZoR4MtTvH48W",
+    "order_id": orderID,
+    "name": "Your Organization Name",
+    "description": "Donation",
+    "image": "/your_logo.jpg",
+    "handler": function(response) {
+      // Handle the payment success response
+    },
+    "prefill": {
+      "name": document.getElementById("name").value,
+      // Add other prefill data if needed
+    },
+    "notes": {
+      // Add any notes if needed
+    },
+    "theme": {
+      "color": "#F37254"
+    },
+    "amount": amount
+  };
+
+  var rzp1 = new Razorpay(options);
+  document.getElementById('rzp-button1').onclick = function(e) {
+    rzp1.open();
+    e.preventDefault();
+  }
+</script>
+
+<?php include 'defaults/footer.php' ?>
 </body>
 
 </html>
