@@ -26,13 +26,36 @@
                 <li class="nav-item">
                     <a class="nav-link" href="index.php#contact">Contact</a>
                 </li>
+                <?php
+                require_once 'functions.php';
+                if (!is_logged_in()) {
+                  echo "<li class='nav-item'>";
+                  echo "  <button type='button' class='btn btn-danger'><a href='login.php' class='badge badge-danger'>Login</a></button>";
+                  echo "</li>";
+                }
+                ?>
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <?php require_once 'functions.php';
+                    $id = $_GET['id'] ?? $_SESSION['PROFILE']['id'];
+
+                    $row = db_query("select * from users where id = :id limit 1", ['id' => $id]);
+
+                    if ($row) {
+                        $row = $row[0];
+                    }
+                    echo $row['firstname'].' '.$row['lastname']; ?>
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="home.php">My profile</a></li>
+                    <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="profile-delete.php">Delete Profile</a></li>
+                  </ul>
+                </li>
             </ul>
             <div>
-
-                <a href="home.php"><button class="btn custom-bg  ms-lg-3">My profile</button></a>
-
-                <a href="logout.php"><button class="btn custom-bg  ms-lg-3">Logout</button></a>
-
             </div>
 
         </div>
