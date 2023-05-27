@@ -83,6 +83,7 @@ if(empty($info['errors']) && $row) {
   $arr['twitter'] = $_POST['twitter'];
   $arr['linkedin'] = $_POST['linkedin'];
   $arr['bio'] = $_POST['bio'];
+  $arr['department'] = $_POST['department'];
 
   $image_query = "";
   if(!empty($image)) {
@@ -108,6 +109,7 @@ if(empty($info['errors']) && $row) {
     twitter = :twitter,
     linkedin = :linkedin,
     bio = :bio,
+    department = :department,
     $image_query,
     $password_query
     WHERE id = :id LIMIT 1",$arr);
