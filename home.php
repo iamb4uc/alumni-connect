@@ -15,7 +15,6 @@ if ($row) {
 }
 
 ?>
-
 <!DOCTYPE html>
 <html>
 
@@ -40,10 +39,12 @@ if ($row) {
                     <img src="<?= get_image($row['image']) ?>" class="img-fluid rounded" style="width: 180px;height:180px;object-fit: cover;">
                     <div>
                         <?php if (user('id') == $row['id']) : ?>
+                          <?php if ($row["is_varified"]==1) : ?>
 
                             <a href="profile-edit.php">
                                 <button class="mx-auto m-1 btn-sm btn btn-primary">Edit</button>
                             </a>
+                          <?php endif; ?>
                             <a href="profile-delete.php">
                                 <button class="mx-auto m-1 btn-sm btn btn-warning text-white">Delete</button>
                             </a>
@@ -68,6 +69,10 @@ if ($row) {
                             <td>
                             <?php if ($row["is_varified"]==0) {
                             echo "Not Verified";
+                            echo"<button class='btn btn-info m-4'><a href='verify.php'>Upload Document</a></button>";
+                            if (!empty($row['validfile'])) {
+                              echo"<button class='btn btn-success m-4'><a href='$row[validfile]'>View Document</a></button>";
+                            }
                             } else {
                               echo "Verified";
                             }?></td>
@@ -88,6 +93,10 @@ if ($row) {
                             <th>Bio</th>
                             <td><?= esc($row['bio']) ?></td>
                         </tr>
+                        <tr>
+                            <th>Department</th>
+                            <td><?= esc($row['department']) ?></td>
+                        </tr>
                     </table>
                     <table class="table table-striped">
                     <div class="h2">Social Link</div>
@@ -102,19 +111,6 @@ if ($row) {
                         <tr>
                             <th>Linkedin</th>
                             <td><?= esc($row['linkedin']) ?></td>
-                        </tr>
-                    </table>
-                    <table class="table table-striped">
-                    <div class="h2">Get Verified</div>
-                        <tr>
-                            <td>
-                            <?php if ($row["is_varified"]==0) {
-                              echo"<a href='index.php'>";
-                              echo"    <button class='btn btn-info m-4'><a href='verify.php'>Upload Documents</a></button>";
-                              echo"</a>";
-                            } else {
-                              echo "Verified! No need to submit documents";
-                            }?></td>
                         </tr>
                     </table>
                 </div>
