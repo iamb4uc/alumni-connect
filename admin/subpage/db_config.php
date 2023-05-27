@@ -217,3 +217,44 @@ function donationtab() {
     echo "No rows found.";
   }
 }
+
+
+function dispContent() {
+  $con = $GLOBALS['con'];
+  $sql = "SELECT * FROM about ORDER BY about_id";
+  $result = $con->query($sql);
+  if ($result->num_rows > 0) {
+    echo "<table class='table text-center table-light'>";
+    echo "<tr>
+      <th>Content Type</th>
+      <th>Text</th>
+      <th>Links</th>
+      <th>Last Updated</th>
+      <th>Operations</th>
+      </tr>";
+
+  // Loop through each row
+  while ($row = $result->fetch_assoc()) {
+    // Access row data
+    $id = $row["about_id"];
+    $ws= " ";
+    $content = $row["content"];
+    $text = $row["text"];
+    $link = $row["link"];
+    $date = $row["update_date"];
+
+    // Output the row data in a table row
+    echo "<tr>";
+    echo "<td>$content</td>";
+    echo "<td>$text</td>";
+    echo "<td>$link</td>";
+    echo "<td>$date</td>";
+    echo "<td>"; echo "<a href='update-content.php?id=$row[about_id]&content=$row[content]&text=$row[text]&link=$row[link]&date=$row[update_date]' class='link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover' onclick='return checkdelete()'>UPDATE</a>"; echo "</td>";
+    echo "</tr>";
+  }
+
+  echo "</table>";
+  } else {
+    echo "No rows found.";
+  }
+}
