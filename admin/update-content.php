@@ -4,10 +4,10 @@ include 'subpage/essential.php';
 adminLogin(); #For checking if user is login user or unauthorized  user
 error_reporting(0);
 $id=$_GET['id'];
-$fname=$_GET['fn'];
-$lname=$_GET['ln'];
-$email=$_GET['em'];
-$is_verified=$_GET['vr'];
+$content=$_GET['content'];
+$text=$_GET['text'];
+$link=$_GET['link'];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,30 +27,23 @@ $is_verified=$_GET['vr'];
     <div class="container-fluid" id="main-content">
       <div class="row">
         <div class="col-lg-10 ms-auto p-4 overflow-hidden">
-<h2>User Credential update/verification form</h2>
+        <h2>Update <?php echo $content; ?> Form</h2>
     <form method="GET">
       <div class="form-group mb-4">
         <label for="id">Id:</label>
         <input type="text" class="form-control" id="id" name="id" value="<?php echo $id; ?>">
       </div>
       <div class="form-group mb-4">
-        <label for="fname">Firstname:</label>
-        <input type="text" class="form-control" id="fname" name="fname" value="<?php echo $fname; ?>">
+        <label for="content">Content:</label>
+        <input type="text" class="form-control" id="content" name="content" value="<?php echo $content; ?>">
       </div>
       <div class="form-group mb-4">
-        <label for="lname">Lastname:</label>
-        <input type="text" class="form-control" name="lname" id="lname" value="<?php echo $lname; ?>">
+        <label for="text">Text:</label>
+        <input type="text" class="form-control" name="text" id="text" value="<?php echo $text; ?>">
       </div>
       <div class="form-group mb-4">
-        <label for="fname">Email:</label>
-        <input type="email" class="form-control" id="fname" name="email" value="<?php echo $email; ?>">
-      </div>
-      <div class="form-group mb-4">
-        <label for="verified">Is Verified?:</label>
-        <select name="verified" class="form-control" id="verified">
-          <option value="1" <?php if ($is_verified == 1) echo 'selected'; ?>>Verify user</option>
-          <option value="0" <?php if ($is_verified == 0) echo 'selected'; ?>>Unverify</option>
-        </select>
+        <label for="link">Link:</label>
+        <input type="link" class="form-control" id="link" name="link" value="<?php echo $link; ?>">
       </div>
       <button type="submit" name="submit" class="btn btn-primary">Submit</button>
     </form>
@@ -67,15 +60,15 @@ $is_verified=$_GET['vr'];
 if (isset($_GET['submit'])) {
   $con = $GLOBALS['con'];
   $id=$_GET['id'];
-  $fn=$_GET['fname'];
-  $ln=$_GET['lname'];
-  $verify=$_GET['verified'];
-  $query="UPDATE users SET id='$id', firstname='$fn', lastname='$ln', is_varified='$verify' WHERE id='$id'";
-  $query="";
+  $content=$_GET['content'];
+  $text=$_GET['text'];
+  $link=$_GET['link'];
+  $date = date("Y-m-d");
+  $query="UPDATE about SET about_id=$id,content=$content,text=$text,link=$link,update_date=$date WHERE id='$id'";
   $data=mysqli_query($con,$query);
   if ($data) {
     echo"<script>alert('Record Updated')</script>";
-?>
+  ?>
 <meta http-equiv="refresh" content="0; url=dashboard.php">
 <?php
   } else {
