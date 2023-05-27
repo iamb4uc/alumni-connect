@@ -2,9 +2,9 @@
 
 require 'functions.php';
 
-if (!is_logged_in()) {
-	redirect('login.php');
-}
+/* if (!is_logged_in()) { */
+/* 	redirect('login.php'); */
+/* } */
 
 $rows = db_query("select * from users");
 
@@ -51,6 +51,7 @@ $rows = db_query("select * from users");
 							<img src="<?= get_image($row['image']) ?>" alt="">
 							<h5 class="mb-0 mt-4"><?= esc($row['firstname']) ?> <?= esc($row['lastname']) ?> <i class="bi bi-check2-circle"></i></h5>
               <p><?= esc($row['occupation']) ?></p>
+              <p><?= esc($row['department']) ?></p>
 							<div class="social-icons">
               <a href="<?= esc($row['facebook']) ?>" target="_blank"><i class="bi bi-facebook"></i></i></a>
 								<a href="<?= esc($row['twitter']) ?>" target="_blank"><i class="bi bi-twitter"></i></a>
