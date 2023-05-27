@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap');
 
+
 :root {
   --goldel: #FFD700;
   --primary: #0d6efd;
@@ -41,7 +42,8 @@ img {
 }
 
 .navbar {
-  box-shadow: var(--box-shadow);
+  /* box-shadow: var(--box-shadow); */
+  background-image: linear-gradient(to right, #de6262, #ffb88c);
 }
 
 .logo {
@@ -54,12 +56,13 @@ img {
 }
 
 .hero {
-  background-image: url(../images/banner.jpg);
+  background-image: url(../images/loginbannaer.jpg);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
   position: relative;
   z-index: 2;
+  
 }
 
 .hero::after {
@@ -69,7 +72,7 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(21, 20, 51, 0.8);
+  background-color: rgba(31, 31, 44, 0.8); 
   z-index: -1;
 }
 

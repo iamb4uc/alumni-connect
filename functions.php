@@ -18,55 +18,62 @@ session_start();
 /* ------------------------------------------------------------------------------------------ */
 
 
-function db_query(string $query, array $data = array()) {
-    $string = "mysql:host=localhost;dbname=final_alumni";
-    $con = new PDO($string, 'root', '');
+function db_query(string $query, array $data = array())
+{
+  $string = "mysql:host=localhost;dbname=final_alumni";
+  $con = new PDO($string, 'root', '');
 
-    $stm = $con->prepare($query);
-    $stm->execute($data);
-    $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  $stm = $con->prepare($query);
+  $stm->execute($data);
+  $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $result = $stm->fetchAll(PDO::FETCH_ASSOC);
+  $result = $stm->fetchAll(PDO::FETCH_ASSOC);
 
-    return $result;
+  return $result;
 }
 
 
-function is_logged_in(): bool {
-	if (!empty($_SESSION['PROFILE'])) {
-		return true;
-	}
-	return false;
+function is_logged_in(): bool
+{
+  if (!empty($_SESSION['PROFILE'])) {
+    return true;
+  }
+  return false;
 }
 
-function redirect($path): void {
-	header("Location: $path");
-	die;
+function redirect($path): void
+{
+  header("Location: $path");
+  die;
 }
 
-function esc(string $str): string {
-	return htmlspecialchars($str);
+function esc(string $str): string
+{
+  return htmlspecialchars($str);
 }
 
-function get_image($path = ''): string {
-	if (file_exists($path)) {
-		return $path;
-	}
-	return './images/no-image.jpg';
+function get_image($path = ''): string
+{
+  if (file_exists($path)) {
+    return $path;
+  }
+  return './images/no-image.jpg';
 }
 
-function user(string $key = '') {
-	if (is_logged_in()) {
-		if (!empty($_SESSION['PROFILE'][$key])) {
-			return $_SESSION['PROFILE'][$key];
-		}
-	}
-	return false;
+function user(string $key = '')
+{
+  if (is_logged_in()) {
+    if (!empty($_SESSION['PROFILE'][$key])) {
+      return $_SESSION['PROFILE'][$key];
+    }
+  }
+  return false;
 }
 
 /* -- POST TRAUMA CHANGES -- */
 
-function fetch_occupation() {
+function fetch_occupation()
+{
   // Start the session
   $id = $_SESSION['PROFILE'];
 
@@ -88,31 +95,32 @@ function fetch_occupation() {
   }
 }
 
-function upload_document($file) {
-    $string = "mysql:host=localhost;dbname=final_alumni";
-    $con = new PDO($string, 'root', '');
+function upload_document($file)
+{
+  $string = "mysql:host=localhost;dbname=final_alumni";
+  $con = new PDO($string, 'root', '');
 
-    // Process the uploaded document
-    if ($file['error'] === UPLOAD_ERR_OK) {
-        $fileTmpPath = $file['tmp_name'];
-        $fileName = $file['name'];
-        $fileSize = $file['size'];
+  // Process the uploaded document
+  if ($file['error'] === UPLOAD_ERR_OK) {
+    $fileTmpPath = $file['tmp_name'];
+    $fileName = $file['name'];
+    $fileSize = $file['size'];
 
-        // Open the document file for reading
-        $fileContent = file_get_contents($fileTmpPath);
+    // Open the document file for reading
+    $fileContent = file_get_contents($fileTmpPath);
 
-        // Prepare the INSERT statement
-        $sql = "INSERT INTO users (validfile) VALUES (:name, :size, :content)";
-        $stmt = $con->prepare($sql);
-        $stmt->bindParam(':name', $fileName);
-        $stmt->bindParam(':size', $fileSize);
-        $stmt->bindParam(':content', $fileContent, PDO::PARAM_LOB);
+    // Prepare the INSERT statement
+    $sql = "INSERT INTO users (validfile) VALUES (:name, :size, :content)";
+    $stmt = $con->prepare($sql);
+    $stmt->bindParam(':name', $fileName);
+    $stmt->bindParam(':size', $fileSize);
+    $stmt->bindParam(':content', $fileContent, PDO::PARAM_LOB);
 
-        // Execute the statement
-        $stmt->execute();
+    // Execute the statement
+    $stmt->execute();
 
-        echo "Document uploaded successfully.";
-    } else {
-        echo "Error uploading the document.";
-    }
+    echo "Document uploaded successfully.";
+  } else {
+    echo "Error uploading the document.";
+  }
 }

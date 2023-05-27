@@ -7,11 +7,54 @@
 	<title>Login</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
 
-	<form method="post" onsubmit="myaction.collect_data(event, 'login')">
+
+	<div class="hero vh-100 d-flex align-items-center" id="home">
+		<div class="container">
+			<div class="row ">
+				<form method="post" onsubmit="myaction.collect_data(event, 'login')">
+					<div class="col-md-4 border rounded mx-auto mt-5 p-4 shadow">
+
+						<div class="h2 text-light mb-3">Login</div>
+
+						<div><small class="my-1 js-error js-error-email text-danger"></small></div>
+
+						<div class="input-group mb-3">
+							<span class="input-group-text" id="basic-addon1"><i class="bi bi-envelope"></i></span>
+							<input name="email" type="text" class="form-control p-3" placeholder="Email">
+						</div>
+						<div class="input-group mb-3">
+							<span class="input-group-text" id="basic-addon1"><i class="bi bi-key"></i></span>
+							<input name="password" type="password" class="form-control p-3" placeholder="Password">
+						</div>
+
+						<div class="progress my-3 d-none">
+							<div class="progress-bar" role="progressbar" style="width: 50%;">Working... 25%</div>
+						</div>
+
+						<button class="btn btn-primary col-12 ">Login</button>
+						<div class="text-center text-light">
+							<br>
+							Dont have an account? <a href="signup.php" class="text-light">SIGNUP HERE</a>
+						</div>
+						<br>
+						<br>
+						<div class="text-center ">
+							<a href="./admin/index.php" class="text-black btn btn-info" style="text-decoration: none;">ADMIN LOGIN</a>
+						</div>
+					</div>
+				</form>
+
+
+			</div>
+		</div>
+	</div>
+	</div>
+	<!-- <form method="post" onsubmit="myaction.collect_data(event, 'login')">
 		<div class="col-md-4 border rounded mx-auto mt-5 p-4 shadow">
 
 			<div class="h2">Login</div>
@@ -33,16 +76,16 @@
 
 			<button class="btn btn-primary col-12">Login</button>
 			<div class="text-center">
-      <br>
+				<br>
 				Dont have an account? <a href="signup.php">SIGNUP HERE</a>
-      </div>
-      <br>
-      <br>
+			</div>
+			<br>
+			<br>
 			<div class="text-center ">
 				<a href="./admin/index.php" class="text-black btn btn-info" style="text-decoration: none;">ADMIN LOGIN</a>
 			</div>
 		</div>
-	</form>
+	</form> -->
 
 </body>
 
