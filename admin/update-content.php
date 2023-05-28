@@ -1,5 +1,5 @@
 <?php
-include 'subpage/db_config.php';
+include_once 'subpage/db_config.php';
 include 'subpage/essential.php';
 adminLogin(); #For checking if user is login user or unauthorized  user
 error_reporting(0);
@@ -57,6 +57,8 @@ $link=$_GET['link'];
 </html>
 
 <?php
+include_once 'subpage/db_config.php';
+
 if (isset($_GET['submit'])) {
   $con = $GLOBALS['con'];
   $id=$_GET['id'];
@@ -64,8 +66,8 @@ if (isset($_GET['submit'])) {
   $text=$_GET['text'];
   $link=$_GET['link'];
   $date = date("Y-m-d");
-  $query="UPDATE about SET about_id=$id,content=$content,text=$text,link=$link,update_date=$date WHERE id='$id'";
-  $data=mysqli_query($con,$query);
+  $statement="UPDATE about SET content=$content,text=$text,link=$link,update_date=$date WHERE about_id='$id'";
+  $data=mysqli_query($con,$statement);
   if ($data) {
     echo"<script>alert('Record Updated')</script>";
   ?>

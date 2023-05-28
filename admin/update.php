@@ -1,6 +1,6 @@
 <?php
-include 'subpage/db_config.php';
-include 'subpage/essential.php';
+include './subpage/db_config.php';
+include './subpage/essential.php';
 adminLogin(); #For checking if user is login user or unauthorized  user
 error_reporting(0);
 $id=$_GET['id'];
@@ -58,7 +58,7 @@ $is_verified=$_GET['vr'];
       </div>
     </div>
 
-    <?php require('subpage/script.php'); ?>
+    <?php require('./subpage/script.php'); ?>
 </body>
 
 </html>
@@ -71,7 +71,6 @@ if (isset($_GET['submit'])) {
   $ln=$_GET['lname'];
   $verify=$_GET['verified'];
   $query="UPDATE users SET id='$id', firstname='$fn', lastname='$ln', is_varified='$verify' WHERE id='$id'";
-  $query="";
   $data=mysqli_query($con,$query);
   if ($data) {
     echo"<script>alert('Record Updated')</script>";
