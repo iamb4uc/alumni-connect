@@ -11,20 +11,20 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php">Home</a>
+                    <a class="nav-link text-white" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="users.php">Our Alumnis</a>
+                    <a class="nav-link text-white" href="users.php">Our Alumnis</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="events.php">Events</a>
+                    <a class="nav-link text-white" href="events.php">Events</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php#about">About US</a>
+                    <a class="nav-link text-white" href="index.php#about">About US</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php#contact">Contact</a>
+                    <a class="nav-link text-white" href="index.php#contact">Contact</a>
                 </li>
                 <?php
                 require_once 'functions.php';

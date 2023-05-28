@@ -6,19 +6,20 @@ include 'defaults/navbar.php';
 
 
 <!-- Banner -->
-<div class="hero vh-100 d-flex align-items-center" id="home">
+<div class="indexbanner vh-100 d-flex align-items-center" id="home">
   <div class="container">
     <div class="row">
       <div class="col-lg-7 mx-auto text-center">
         <h1 class="display-4 text-white">Alumni Connect</h1>
         <p class="text-white my-3">A web based platform for our college alumni!</p>
+        <p class="text-white">Established in 1946, Karimganj College is one of the pioneering Colleges of Assam</p>
         <a href="donate.php" class="btn btn-lg me-2 custom-bg">Donate</a>
-        </div>
-
-
       </div>
+
+
     </div>
   </div>
+</div>
 </div><!-- //Banner -->
 
 
@@ -38,19 +39,19 @@ include 'defaults/navbar.php';
       <?php if (!empty($rows)) : ?>
         <?php foreach ($rows as $row) : ?>
           <?php if ($row['is_varified'] !== 0) : ?>
-          <div class="col-lg-3 col-sm-6">
-            <div class="team-member card-effect">
-              <img src="<?= get_image($row['image']) ?>" alt="">
-              <h5 class="mb-0 mt-4"><?= esc($row['firstname']) ?> <?= esc($row['lastname']) ?> <i class="bi bi-check2-circle"></i></h5>
-              <p><?= esc($row['occupation']) ?></p>
-              <div class="social-icons">
-              <a href="<?= esc($row['facebook']) ?>" target="_blank"><i class="bi bi-facebook"></i></i></a>
-                <a href="<?= esc($row['twitter']) ?>" target="_blank"><i class="bi bi-twitter"></i></a>
-                <a href="<?= esc($row['linkedin']) ?>" target="_blank"><i class="bi bi-linkedin"></i></i></a>
+            <div class="col-lg-3 col-sm-6">
+              <div class="team-member card-effect">
+                <img src="<?= get_image($row['image']) ?>" alt="">
+                <h5 class="mb-0 mt-4"><?= esc($row['firstname']) ?> <?= esc($row['lastname']) ?> <i class="bi bi-check2-circle"></i></h5>
+                <p><?= esc($row['occupation']) ?></p>
+                <div class="social-icons">
+                  <a href="<?= esc($row['facebook']) ?>" target="_blank"><i class="bi bi-facebook"></i></i></a>
+                  <a href="<?= esc($row['twitter']) ?>" target="_blank"><i class="bi bi-twitter"></i></a>
+                  <a href="<?= esc($row['linkedin']) ?>" target="_blank"><i class="bi bi-linkedin"></i></i></a>
+                </div>
               </div>
             </div>
-          </div>
-      <?php endif; ?>
+          <?php endif; ?>
         <?php endforeach; ?>
       <?php else : ?>
         <div class="text-center alert alert-danger">That profile was not found</div>

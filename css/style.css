@@ -54,6 +54,25 @@ img {
   font-size: 14px;
   font-weight: 700;
 }
+.indexbanner{
+    background-image: url(../images/indexbanner.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 2;
+}
+
+.indexbanner::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(31, 31, 44, 0.8);
+  z-index: -1;
+}
 
 .hero {
   background-image: url(../images/loginbannaer.jpg);
@@ -75,6 +94,34 @@ img {
   background-color: rgba(31, 31, 44, 0.8); 
   z-index: -1;
 }
+
+.signupbanner {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--color-white);
+    margin: 0;
+}
+
+.signupbanner::before {
+  content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: var(--color-darkblue);
+    background-image: linear-gradient(115deg,
+        rgba(31, 31, 44, 0.8),
+        rgba(31, 31, 44, 0.8)),
+      url(/images/signupbanner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 
 section {
   padding-top: 100px;

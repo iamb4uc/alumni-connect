@@ -7,11 +7,85 @@
 	<title>Signup</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
-	<form method="post" enctype="multipart/form-data" onsubmit="myaction.collect_data(event, 'signup')">
+	<div class="signupbanner vh-100 d-flex align-items-center" id="home">
+		<div class="container">
+			<div class="row ">
+				<form method="post" enctype="multipart/form-data" onsubmit="myaction.collect_data(event, 'signup')">
+					<div class="col-md-12 col-lg-4 border rounded mx-auto mt-5 p-4 shadow">
+
+						<div class="h2 text-white">Signup</div>
+
+						<div class="col-md-12 mt-3">
+							<input name="firstname" type="text" class="form-control p-3" placeholder="First name">
+						</div>
+						<div><small class="js-error js-error-firstname text-danger"></small></div>
+
+						<div class="col-md-12 mt-3">
+							<input name="lastname" type="text" class="form-control p-3" placeholder="Last name">
+						</div>
+						<div><small class="js-error js-error-lastname text-danger"></small></div>
+
+						<div class="input-group mt-3">
+							<select class="form-select" name="gender">
+								<option selected value="">--Select Gender--</option>
+								<option value="Male">Male</option>
+								<option value="Female">Female</option>
+								<option value="Others">Others</option>
+							</select>
+						</div>
+						<div><small class="js-error js-error-gender text-danger"></small></div>
+
+						<div class="col-md-12 mt-3">
+							<input name="email" type="text" class="form-control p-3" placeholder="Email">
+						</div>
+						<div><small class="js-error js-error-email text-danger"></small></div>
+
+						<div class="col-md-12 mt-3">
+							<input name="batchyr" type="number" class="form-control p-3" placeholder="Batch Year">
+						</div>
+						<div><small class="js-error js-error-calendar text-danger"></small></div>
+
+						<div class="col-md-12 mt-3">
+							<input name="occupation" type="text" class="form-control p-3" placeholder="Occupation">
+						</div>
+						<div><small class="js-error js-error-calendar text-danger"></small></div>
+
+						<div class="col-md-12 ps-0 mt-3">
+							<input name="password" type="password" class="form-control p-3" placeholder="Password">
+						</div>
+						<div><small class="js-error js-error-password text-danger"></small></div>
+
+						<div class="col-md-12 ps-0 mt-3">
+							<input name="retype_password" type="password" class="form-control p-3" placeholder="Retype Password">
+						</div>
+
+						<div class="progress mt-3 d-none">
+							<div class="progress-bar" role="progressbar" style="width: 50%;">Working... 25%</div>
+						</div>
+
+						<button class="mt-3 btn btn-primary col-12">Signup</button>
+						<div class="text-center mt-2 text-white">
+
+							Already have an account? <a href="login.php" class="text-info">LOGIN HERE</a>
+						</div>
+						<br>
+					</div>
+				</form>
+
+
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<!-- <form method="post" enctype="multipart/form-data" onsubmit="myaction.collect_data(event, 'signup')">
 		<div class="col-md-12 col-lg-4 border rounded mx-auto mt-5 p-4 shadow">
 
 			<div class="h2">Signup</div>
@@ -39,17 +113,17 @@
 			<div class="col-md-12 mt-3">
 				<input name="email" type="text" class="form-control p-3" placeholder="Email">
 			</div>
-      <div><small class="js-error js-error-email text-danger"></small></div>
+			<div><small class="js-error js-error-email text-danger"></small></div>
 
-      <div class="col-md-12 mt-3">
+			<div class="col-md-12 mt-3">
 				<input name="batchyr" type="number" class="form-control p-3" placeholder="Batch Year">
 			</div>
-      <div><small class="js-error js-error-calendar text-danger"></small></div>
+			<div><small class="js-error js-error-calendar text-danger"></small></div>
 
 			<div class="col-md-12 mt-3">
 				<input name="occupation" type="text" class="form-control p-3" placeholder="Occupation">
 			</div>
-      <div><small class="js-error js-error-calendar text-danger"></small></div>
+			<div><small class="js-error js-error-calendar text-danger"></small></div>
 
 			<div class="col-md-12 ps-0 mt-3">
 				<input name="password" type="password" class="form-control p-3" placeholder="Password">
@@ -65,13 +139,13 @@
 			</div>
 
 			<button class="mt-3 btn btn-primary col-12">Signup</button>
-      <div class="text-center">
-        <br>
+			<div class="text-center">
+				<br>
 				Already have an account? <a href="login.php">LOGIN HERE</a>
 			</div>
 
 		</div>
-	</form>
+	</form> -->
 
 </body>
 
