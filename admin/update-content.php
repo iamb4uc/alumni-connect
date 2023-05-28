@@ -61,12 +61,12 @@ include_once 'subpage/db_config.php';
 
 if (isset($_GET['submit'])) {
   $con = $GLOBALS['con'];
-  $id=$_GET['id'];
+  $about_id=$_GET['id'];
   $content=$_GET['content'];
   $text=$_GET['text'];
   $link=$_GET['link'];
   $date = date("Y-m-d");
-  $statement="UPDATE about SET content=$content,text=$text,link=$link,update_date=$date WHERE about_id='$id'";
+  $statement="UPDATE about SET about_id=$about_id, content=$content,text=$text,link=$link,update_date=$date WHERE about_id='$about_id'";
   $data=mysqli_query($con,$statement);
   if ($data) {
     echo"<script>alert('Record Updated')</script>";
