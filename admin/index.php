@@ -47,6 +47,7 @@ require('subpage/db_config.php');
                     <input name="admin_pass" required type="password" class="form-control shadow-none text-center" placeholder="Password">
                 </div>
                 <button name="admin_login" type="submit" class="btn text-white custom-bg shadow-none">Login</button>
+                <a href="../index.php" class="text-info" style="text-decoration: none;">back</a>
             </div>
         </form>
     </div>

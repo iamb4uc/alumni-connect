@@ -13,7 +13,7 @@ include 'defaults/navbar.php';
         <h1 class="display-4 text-white">Alumni Connect</h1>
         <p class="text-white my-3">A web based platform for our college alumni!</p>
         <p class="text-white">Established in 1946, Karimganj College is one of the pioneering Colleges of Assam</p>
-        <a href="donate.php" class="btn btn-lg me-2 custom-bg">Donate</a>
+        <a href="donate.php" class="btn btn-lg me-2 custom-bg">Donate Us</a>
       </div>
 
 
