@@ -18,6 +18,7 @@ require('subpage/db_config.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login Panel</title>
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
     <?php
     require('subpage/links.php');
     ?>
@@ -31,12 +32,19 @@ require('subpage/db_config.php');
             transform: translate(-50%, -50%);
             width: 400px;
         }
+
+        .custom-css {
+            font-family: "Sora", sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background: linear-gradient(-45deg, #EE7252, #E74C7E, #23A6D5, #22D5AB);
+        }
     </style>
 </head>
 
-<body class="bg-light">
+<body class="custom-css">
     <!--Start Admin login Form -->
-    <div class="login-form text-center rounded bg-white shadow overflow-hidden">
+    <div class="login-form text-center rounded custom-css shadow overflow-hidden">
         <form method="POST">
             <h4 class="bg-dark text-white py-3">ADMIN LOGIN PANEL</h4>
             <div class="p-4">
