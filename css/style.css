@@ -3,6 +3,8 @@
 
 :root {
   --goldel: #FFD700;
+  --mixed: #de6262;
+  --light: #ffb88c;
   --primary: #0d6efd;
   --dark: #21252f;
   --body: #888;
@@ -14,7 +16,9 @@ body {
   font-family: "Sora", sans-serif;
   line-height: 1.7;
   color: var(--dark);
+  background: linear-gradient(-45deg, #EE7252, #E74C7E, #23A6D5, #22D5AB);
 }
+
 
 h1,
 h2,
@@ -28,8 +32,9 @@ h6,
 }
 
 .custom-bg {
-  background-color: var(--goldel);
-  border: 1px solid var(--goldel);
+  /* background-color: var(--goldel); */
+  background-color:  var(--mixed);
+  border: 1px solid var(--light);
 }
 
 a {

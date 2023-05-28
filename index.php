@@ -32,7 +32,7 @@ include 'defaults/navbar.php';
     <div class="row mb-5">
       <div class="col-md-8 mx-auto text-center">
 
-        <h1>Meet Our Alumni</h1>
+        <h1 class="text-dark">Meet Our Alumni</h1>
       </div>
     </div>
     <div class="row text-center g-4">
@@ -69,7 +69,7 @@ include 'defaults/navbar.php';
 
 
 <!-- Events -->
-<section id="event" class="bg-light">
+<section id="event">
   <div class="container">
     <div class="row mb-5">
       <div class="col-md-8 mx-auto text-center">
@@ -108,11 +108,11 @@ include 'defaults/navbar.php';
 
 
 <!-- About -->
-<section id="about" class="bg-light">
-  <div class="my-5 px-4">
+<section id="about">
+  <div class="my-5 px-4 ">
 
     <h1 class="text-center">About US</h1>
-    <p class="text-center mt-3"> Established in 1946, Karimganj College is one of the pioneering Colleges of Assam, imparting education in Science, Arts & Commerce. Situated on the bank of Kushiara River demarcating Indo- Bangladesh Border, the College is playing a significant role for last six decades in the field of Higher Education of the region. Today, it is one of the leading colleges under Assam University.<br><br><a href="http://www.karimganjcollege.ac.in" class='btn btn-warning' target="_blank">Learn More...</a></p>
+    <p class="text-center mt-3"> Established in 1946, Karimganj College is one of the pioneering Colleges of Assam, imparting education in Science, Arts & Commerce. Situated on the bank of Kushiara River demarcating Indo- Bangladesh Border, the College is playing a significant role for last six decades in the field of Higher Education of the region. Today, it is one of the leading colleges under Assam University.<br><br><a href="http://www.karimganjcollege.ac.in" class='btn custom-bg' target="_blank">Learn More...</a></p>
   </div>
   <div class="container">
     <div class="row justify-content-between align-items-center">
@@ -136,16 +136,14 @@ include 'defaults/navbar.php';
 
 
 <!-- contact -->
-<section id="contact" class="bg-light">
+<section id="contact">
   <div class="my-5 px-4">
     <h1 class="text-center">Contact US</h1>
     <!-- Need to be fix -->
     <div class="h-line bg-dark"></div>
     <!-- end Need to be fix -->
     <p class="text-center mt-3">
-      Lorem ipsum dolor sit amet consectetur
-      adipisicing elit. <br> Doloremque exceptur maiores cum quae
-      inventore ipsa, aperiam sit vero atque sint.
+      If you have any quary related to college feel free to contact us. <br> Call between 9:00AM - 3:00PM
     </p>
   </div>
 
@@ -158,20 +156,22 @@ include 'defaults/navbar.php';
 
           <h5>Address</h5>
           <a href="https://goo.gl/maps/HmPytVNUSLhti3FC6" target="_blank" class="d-inline-block text-decoration-none text-dark mb-2">
-            <i class="bi bi-geo-alt-fill"></i> Karimganj College, Karimganj, Assam
+            <i class="bi bi-geo-alt-fill"></i> Karimganj College
+            Station Road, Karimganj -788710
+            Assam, India.
           </a>
 
           <h5 class="mt-4">Call us</h5>
           <a href="tel: +919957381111" class="d-inline-block mb-2 text-decoration-none text-dark">
-            <i class="bi bi-telephone-fill"></i> +9199999999000
+            <i class="bi bi-telephone-fill"></i> +91-3843-262108
           </a>
           <br>
           <a href="tel: +919957381111" class="d-inline-block mb-2 text-decoration-none text-dark">
-            <i class="bi bi-telephone-fill"></i> +9199999999000
+            <i class="bi bi-telephone-fill"></i> +91-3843-267043
           </a>
           <h5 class="mt-4">Email</h5>
           <a href="mailto: masuk27roll@gmail.com" class="d-inline-block mb-2 text-decoration-none text-dark">
-            <i class="bi bi-envelope-fill"></i> karimganjCollege@gmail.com
+            <i class="bi bi-envelope-fill"></i> karimganjcollege@gmail.com
           </a>
 
           <h5 class="mt-4">Follow us</h5>

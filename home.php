@@ -34,17 +34,17 @@ if ($row) {
 
     <section>
         <?php if (!empty($row)) : ?>
-            <div class="row col-lg-8 border rounded mx-auto p-2 shadow-lg ">
+            <div class="row col-lg-8 border rounded mx-auto p-2 shadow-lg  bg-light">
                 <div class="col-md-4 text-center mt-5">
                     <img src="<?= get_image($row['image']) ?>" class="img-fluid rounded" style="width: 180px;height:180px;object-fit: cover;">
                     <div>
                         <?php if (user('id') == $row['id']) : ?>
-                          <?php if ($row["is_varified"]==1) : ?>
+                            <?php if ($row["is_varified"] == 1) : ?>
 
-                            <a href="profile-edit.php">
-                                <button class="mx-auto m-1 btn-sm btn btn-primary">Edit</button>
-                            </a>
-                          <?php endif; ?>
+                                <a href="profile-edit.php">
+                                    <button class="mx-auto m-1 btn-sm btn btn-primary">Edit</button>
+                                </a>
+                            <?php endif; ?>
                             <a href="profile-delete.php">
                                 <button class="mx-auto m-1 btn-sm btn btn-warning text-white">Delete</button>
                             </a>
@@ -67,15 +67,15 @@ if ($row) {
                         <tr>
                             <th>Verification Status</th>
                             <td>
-                            <?php if ($row["is_varified"]==0) {
-                            echo "Not Verified";
-                            echo"<button class='btn btn-info m-4'><a href='verify.php'>Upload Document</a></button>";
-                            if (!empty($row['validfile'])) {
-                              echo"<button class='btn btn-success m-4'><a href='$row[validfile]'>View Document</a></button>";
-                            }
-                            } else {
-                              echo "Verified";
-                            }?></td>
+                                <?php if ($row["is_varified"] == 0) {
+                                    echo "Not Verified";
+                                    echo "<button class='btn btn-info m-4'><a href='verify.php'>Upload Document</a></button>";
+                                    if (!empty($row['validfile'])) {
+                                        echo "<button class='btn btn-success m-4'><a href='$row[validfile]'>View Document</a></button>";
+                                    }
+                                } else {
+                                    echo "Verified";
+                                } ?></td>
                         </tr>
                         <tr>
                             <th>First Name</th>
@@ -99,7 +99,7 @@ if ($row) {
                         </tr>
                     </table>
                     <table class="table table-striped">
-                    <div class="h2">Social Link</div>
+                        <div class="h2">Social Link</div>
                         <tr>
                             <th>Facebook</th>
                             <td><?= esc($row['facebook']) ?></td>

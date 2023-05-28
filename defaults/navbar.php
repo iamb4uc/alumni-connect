@@ -47,7 +47,7 @@
                         if ($row) {
                             $row = $row[0];
                         }
-                        echo $row['firstname'] . ' ' . $row['lastname']; ?>
+                        echo '<label style="color:E74C7E">' .  $row['firstname'] . ' ' . $row['lastname'] . '</label>'; ?>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="home.php">My profile</a></li>

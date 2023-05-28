@@ -39,7 +39,7 @@
 						<button class="btn btn-primary col-12 ">Login</button>
 						<div class="text-center text-light">
 							<br>
-							Dont have an account? <a href="signup.php" class="text-light">SIGNUP HERE</a>
+							Dont have an account? <a href="signup.php" class="text-info">SIGNUP HERE</a>
 						</div>
 						<br>
 						<br>

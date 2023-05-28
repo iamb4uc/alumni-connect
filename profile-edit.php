@@ -14,7 +14,7 @@ if ($row) {
   $row = $row[0];
 }
 
-if ($row["is_varified"]==0) {
+if ($row["is_varified"] == 0) {
   redirect('home.php');
 }
 ?>
@@ -36,8 +36,8 @@ if ($row["is_varified"]==0) {
   <?= include 'defaults/navbar.php'; ?>
   <?php if (!empty($row)) : ?>
 
-    <div class="row col-lg-8 border rounded mx-auto mt-5 p-2 shadow-lg">
-        <div class="h1 text-center">Edit Profile</div>
+    <div class="row col-lg-8 border rounded mx-auto mt-5 p-2 shadow-lg bg-light mb-5">
+      <div class="h1 text-center">Edit Profile</div>
       <div class="col-md-4 text-center">
         <img src="<?= get_image($row['image']) ?>" class="js-image img-fluid rounded" style="width: 180px;height:180px;object-fit: cover;">
         <div>
@@ -133,7 +133,7 @@ if ($row["is_varified"]==0) {
 
           </table>
 
-<hr>
+          <hr>
           <table class="table table-striped">
             <tr>
               <th colspan="2">Social Links:</th>
@@ -183,7 +183,7 @@ if ($row["is_varified"]==0) {
     </a>
   <?php endif; ?>
 
-<?php include 'defaults/footer.php'; ?>
+  <?php include 'defaults/footer.php'; ?>
 </body>
 
 </html>
