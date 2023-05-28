@@ -3,7 +3,7 @@ if (isset($_POST['id'])) {
     $id = $_POST['id'];
     // Your database connection code here
     $con = $GLOBALS['con'];
-    
+
     // Update the value for the current row
     $updateSql = "UPDATE users SET is_varified = 1 WHERE id = $id";
     if ($con->query($updateSql) !== TRUE) {

@@ -249,7 +249,7 @@ function dispContent() {
     echo "<td>$text</td>";
     echo "<td>$link</td>";
     echo "<td>$date</td>";
-    echo "<td>"; echo "<a href='update-content.php?id=$row[about_id]&content=$row[content]&text=$row[text]&link=$row[link]&date=$row[update_date]' class='link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover' onclick='return checkdelete()'>UPDATE</a>"; echo "</td>";
+    echo "<td>"; echo "<a href='update-content.php?id=$row[about_id]&content=$row[content]&text=$row[text]&link=$row[link]&date=$row[update_date]' class='link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover'>UPDATE</a>"; echo "</td>";
     echo "</tr>";
   }
 

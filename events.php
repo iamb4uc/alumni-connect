@@ -1,6 +1,6 @@
 <?php include 'defaults/header.php'; ?>
 <?php include 'defaults/navbar.php'; ?>
-<link rel="stylesheet" href="css/event.css">
+<link rel="stylesheet" href="./css/event.css">
 <div class="main">
     <div class="col-md-8s mx-auto text-center">
         <h3>RECENT EVENTS</h3>
@@ -11,13 +11,13 @@
         <div class="swiper swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img src="/images/event.jpg" class="w-100 d-block" />
+                    <img src="./images/event.jpg" class="w-100 d-block" />
                 </div>
                 <div class="swiper-slide">
-                    <img src="/images/platinum1.jpg" class="w-100 d-block" />
+                    <img src="./images/platinum1.jpg" class="w-100 d-block" />
                 </div>
                 <div class="swiper-slide">
-                    <img src="/images/platinum2.jpg" class="w-100 d-block" />
+                    <img src="./images/platinum2.jpg" class="w-100 d-block" />
                 </div>
 
             </div>
