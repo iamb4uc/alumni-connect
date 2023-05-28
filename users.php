@@ -6,7 +6,7 @@ require 'functions.php';
 /* 	redirect('login.php'); */
 /* } */
 
-$rows = db_query("select * from users");
+$rows = db_query("select * from users ORDER BY RAND()");
 
 
 ?>
