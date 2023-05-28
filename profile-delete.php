@@ -105,6 +105,7 @@ if ($row) {
 	<?php endif; ?>
 
 
+		<?php include 'defaults/footer.php'; ?>
 
 
 	<script>
