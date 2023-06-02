@@ -106,12 +106,14 @@ function getTotaldonations() {
 
 function usertab() {
   $con = $GLOBALS['con'];
-  $sql = "SELECT * FROM users ORDER BY date DESC LIMIT 20";
+  $sql = "SELECT * FROM users WHERE is_varified = 0 AND validfile IS NOT NULL ORDER BY date DESC LIMIT 100";
   if (isset($_POST['more'])) {
-    $sql = "SELECT * FROM users ORDER BY date DESC LIMIT 100";
+    $sql = "SELECT * FROM users ORDER BY date DESC";
   } if (isset($_POST['less'])) {
-  $sql = "SELECT * FROM users ORDER BY date DESC LIMIT 2";
-    }
+    $sql = "SELECT * FROM users WHERE is_varified = 1 AND validfile IS NOT NULL ORDER BY date DESC LIMIT 20";
+  } if (isset($_POST['original'])) {
+  $sql = "SELECT * FROM users WHERE is_varified = 0 AND validfile IS NOT NULL ORDER BY date DESC LIMIT 100";
+  }
   $result = $con->query($sql);
   if ($result->num_rows > 0) {
     echo "<table class='table text-center table-light'>";

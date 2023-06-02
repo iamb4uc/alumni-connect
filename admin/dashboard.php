@@ -26,7 +26,7 @@ adminLogin(); #For checking if user is login user or unauthorized  user
 <body class="bg=light">
 
   <?php require('subpage/header.php'); ?>
-  <div class="container-fluid custom-css" id="main-content">
+  <div class="container-fluid custom-css mb-6" id="main-content">
     <div class="row">
       <div class="col-lg-10 ms-auto p-4 overflow-hidden">
         <!-- Document Body -->
@@ -65,8 +65,9 @@ adminLogin(); #For checking if user is login user or unauthorized  user
               <h1>User Table</h1>
               <?php usertab(); ?>
               <form method='POST'>
-                <input type='submit' name='more' class="btn btn-secondary" value='Show More'>
-                <input type='submit' name='less' class="btn btn-primary" value='Show Less'>
+                <input type='submit' name='more' class="btn btn-secondary" value='Show All'>
+                <input type='submit' name='less' class="btn btn-primary" value='Show Verified Only'>
+                <input type='submit' name='original' class="btn btn-danger" value='Show Unverified Only'>
               </form>
             </div>
           </div>
