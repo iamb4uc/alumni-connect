@@ -35,7 +35,7 @@ if ($row) {
 
 	<?php if (!empty($row)) : ?>
 		<?php include 'defaults/navbar.php'; ?>
-		<div class="container mt-10">
+		<div class="container mt-10 mb-5">
 			<div class="row col-lg-8 border rounded mx-auto mt-5 p-2 shadow-lg bg-light">
 				<div class="col-md-4 text-center">
 					<img src="<?= get_image($row['image']) ?>" class="js-image img-fluid rounded" style="width: 180px;height:180px;object-fit: cover;">
