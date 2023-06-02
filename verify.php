@@ -33,7 +33,7 @@ if ($row) {
 	<?= include 'defaults/navbar.php'; ?>
 	<?php if (!empty($row)) : ?>
 
-	<div class="row col-lg-8 border rounded mx-auto mt-5 p-2 shadow-lg">
+	<div class="row col-lg-8 border rounded mx-auto mt-5 mb-5 bg-light p-2 shadow-lg">
     <div class="h1 text-center">Upload document</div>
 			<div class="mb-3">
         <form method="post" onsubmit="myaction.collect_data(event, 'verify')">
