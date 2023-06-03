@@ -65,7 +65,7 @@ if ($row) {
 		</a>
 	<?php endif; ?>
 
-	<?= include 'defaults/footer.php'; ?>
+	<?php include 'defaults/footer.php'; ?>
 </body>
 
 </html>
