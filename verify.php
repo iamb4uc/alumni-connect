@@ -65,11 +65,7 @@ if ($row) {
 		</a>
 	<?php endif; ?>
 
-<<<<<<< HEAD
-	<?php include 'defaults/footer.php'; ?>
-=======
 	<?php include "defaults/footer.php"; ?>
->>>>>>> f5b1043c9973e0230e1763799df2c042efef502e
 </body>
 
 </html>
