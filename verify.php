@@ -33,12 +33,12 @@ if ($row) {
 	<?= include 'defaults/navbar.php'; ?>
 	<?php if (!empty($row)) : ?>
 
-	<div class="row col-lg-8 border rounded mx-auto mt-5 mb-5 bg-light p-2 shadow-lg">
-    <div class="h1 text-center">Upload document</div>
+		<div class="row col-lg-8 border rounded mx-auto mt-5 mb-5 bg-light p-2 shadow-lg">
+			<div class="h1 text-center">Upload document</div>
 			<div class="mb-3">
-        <form method="post" onsubmit="myaction.collect_data(event, 'verify')">
-          <label for="formFile" class="form-label">Click below to select an image</label>
-          <input onchange="display_image(this.files[0])" class="js-image-input form-control" type="file" id="formFile">
+				<form method="post" onsubmit="myaction.collect_data(event, 'verify')">
+					<label for="formFile" class="form-label">Click below to select an image</label>
+					<input onchange="display_image(this.files[0])" class="js-image-input form-control" type="file" id="formFile">
 					<div class="progress my-3 d-none">
 						<div class="progress-bar" role="progressbar" style="width: 50%;">Working... 25%</div>
 					</div>
@@ -50,13 +50,13 @@ if ($row) {
 						<a href="home.php"><label class="btn btn-secondary">Back</label></a>
 
 					</div>
-        </form>
+				</form>
 			</div>
-      <div>
-        <small class="js-error js-error-file text-danger"></small>
-      </div>
+			<div>
+				<small class="js-error js-error-file text-danger"></small>
+			</div>
 		</div>
-  </div>
+		</div>
 
 	<?php else : ?>
 		<div class="text-center alert alert-danger">That profile was not found</div>
@@ -65,7 +65,7 @@ if ($row) {
 		</a>
 	<?php endif; ?>
 
-	<?= include 'defaults/footer.php'; ?>
+	<?php include "defaults/footer.php"; ?>
 </body>
 
 </html>
