@@ -1,13 +1,17 @@
-THIS IS A NEW BRANCH OF THE LAST WORKING PROJECT VERSION BEFORE I FUCKED UP :)
+As of June 4th 2023 this project has been archived
+for the time being and no further commits is
+permitted in this branch of the project. If you
+want to make your own changes kindly make your own
+branch and change it I wont be taking in new pr as
+long as this message exists. I have some personal
+things to do so I wont be online or writting code.
 
-~~~~~~~~~~~~~~
-~~~~ TODO ~~~~
-~~~~~~~~~~~~~~
-[ ] INCLUDE BACKGROUND IMAGE FOR PAGES
-[ ] USE TOGGLE BUTTONS/DIALOG BOX INSTEAD OF 0/1 FOR VERIFICATION.
-[ ] CREATE ADMIN DASHBOARD
-  [X] SHOW TOTEL USERS
-  [X] SHOW TOTAL ADMIN
-  [X] SHOW RECENTLY CREATED USERS IN DASHBOARD
-  [ ] SHOW DOCUMENT AND APPROVED OR NOT BUTTONS
-  [ ] MAKE AN EVENT UPLOAD PAGE FOR UPLOADING EVENTS.
+
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~ FUTURE TODOs ~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+* [ ] Write better documentation for the upload document part of the platform.
+* [ ] Clean out the code as much as possible.
+* [ ] Test it on a live server.
+* [ ] Deploy it.
+* [ ] Make UI little bit minimal and clean and idiot proof.
